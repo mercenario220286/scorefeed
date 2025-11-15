@@ -691,6 +691,33 @@ main {
     align-items: flex-start;
   }
 }
+/* BSCscan badge */
+.bscscan-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-family: var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #021104;
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+}
+
+.bscscan-link:hover {
+  background: #9bff79;
+  transform: translateY(-1px);
+}
+
+.bscscan-icon {
+  height: 12px;
+  width: auto;
+  display: block;
+}
 
 .bsc-btn {
   border-color: #f3ba2f;
