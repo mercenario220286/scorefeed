@@ -230,11 +230,41 @@ interface IScoreFeed {
             </p>
           </div>
         </div>
-      </section>
+</section>
 
-    <footer class="site-footer">
-      <span>ScoreFeed · Pixel football oracle on BNB Chain</span>
-      <span>© 2025 · Built for Web3 builders</span>
-    </footer>
-  </body>
+<!-- SCRIPT PER SCORRIMENTO PARTITE -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const rows = document.querySelectorAll(".match-card");
+  let currentIndex = 0;
+  const batchSize = 3;
+
+  function updateVisibleMatches() {
+    rows.forEach((row, index) => {
+      const start = currentIndex;
+      const end = currentIndex + batchSize;
+
+      if (index >= start && index < end) {
+        row.style.display = "block";
+        row.classList.add("score-row");
+      } else {
+        row.style.display = "none";
+      }
+    });
+
+    currentIndex += batchSize;
+    if (currentIndex >= rows.length) currentIndex = 0;
+  }
+
+  updateVisibleMatches();
+  setInterval(updateVisibleMatches, 5000);
+});
+</script>
+
+<footer class="site-footer">
+    <span>Scorefeed – Pixel football oracle on BNB Chain</span>
+    <span>© 2025 · Built for Web3 builders</span>
+</footer>
+
+</body>
 </html>
