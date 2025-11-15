@@ -18,11 +18,12 @@
         <span class="logo-text">ScoreFeed</span>
       </div>
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#how">How it works</a>
-        <a href="#leagues">Leagues</a>
-        <a href="#devs">For devs</a>
-      </nav>
+  <a href="#about">About</a>
+  <a href="#how">How it works</a>
+  <a href="#leagues">Leagues</a>
+  <a href="#devs">For devs</a>
+  <a href="#roadmap">Roadmap</a>
+</nav>
     </header>
 
     <main>
@@ -191,6 +192,52 @@ interface IScoreFeed {
         </p>
       </section>
     </main>
+    <!-- ROADMAP -->
+      <section id="roadmap" class="section">
+        <h2>Roadmap</h2>
+        <p>
+          ScoreFeed is starting small and focused, then expanding to more
+          leagues, features and integrations. This is the current MVP roadmap.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Phase 1 – MVP Online</h3>
+            <p>
+              Static site, brand and landing page live on Vercel. Premier League
+              &amp; La Liga defined as initial focus, with clear data model for
+              scores, scorers, minutes and cards.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Phase 2 – Oracle Engine</h3>
+            <p>
+              Backend connects to multiple football data providers. AI layer
+              validates events and prepares final results ready to be pushed
+              on-chain on BNB testnet.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Phase 3 – On-Chain &amp; Dashboard</h3>
+            <p>
+              ScoreFeed oracle contract deployed on BNB mainnet. Matches
+              published automatically. Public dashboard lists fixtures and
+              results, with links to on-chain data.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Phase 4 – More Leagues &amp; Integrations</h3>
+            <p>
+              Add Serie A, Bundesliga, Ligue 1 and MLS. Open up API access and
+              paid plans for prediction markets, dApps and AI agents that need
+              reliable football data.
+            </p>
+          </div>
+        </div>
+      </section>
 
     <footer class="site-footer">
       <span>ScoreFeed · Pixel football oracle on BNB Chain</span>
