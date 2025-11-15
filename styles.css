@@ -154,6 +154,15 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    filter 0.12s ease-out;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(58, 255, 101, 0.4);
 }
 
 .btn.primary {
