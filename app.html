@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ScoreFeed App – Football Oracle Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ScoreFeed app – pixel football oracle dashboard for Premier League & La Liga on BNB Chain."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scanlines"></div>
+
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-mark">SF</span>
+        <span class="logo-text">ScoreFeed</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#leagues">Leagues</a>
+        <a href="index.html#devs">For devs</a>
+        <a href="index.html#roadmap">Roadmap</a>
+        <a href="app.html">App</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- APP HERO -->
+      <section class="section app-hero">
+        <div class="app-hero-text">
+          <h1>ScoreFeed App</h1>
+          <p>
+            Pixel football oracle dashboard. Demo view of how Premier League
+            &amp; La Liga fixtures and on-chain results will look once the MVP
+            oracle is live.
+          </p>
+          <p class="app-hero-note">
+            Data below is demo-only for now. The UI is real – the feed will be
+            connected to live data and on-chain results.
+          </p>
+        </div>
+        <div class="app-hero-meta">
+          <div class="pill pill-live">MVP MODE: DEMO</div>
+          <div class="pill pill-chain">Target chain: BNB</div>
+        </div>
+      </section>
+
+      <!-- FILTER BAR -->
+      <section class="section app-filters">
+        <div class="filter-bar">
+          <div class="filter-left">
+            <span class="filter-label">League filter:</span>
+            <button class="filter-chip active">All</button>
+            <button class="filter-chip">Premier League</button>
+            <button class="filter-chip">La Liga</button>
+          </div>
+          <div class="filter-right">
+            <span class="filter-label">Date:</span>
+            <span class="filter-value">Demo – matchday sample</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MATCH CARDS -->
+      <section class="section app-matches">
+        <h2>Match feed (demo)</h2>
+        <div class="match-grid">
+          <!-- Match 1 -->
+          <article class="match-card">
+            <header class="match-header">
+              <span class="badge league-badge">Premier League</span>
+              <span class="status-pill status-onchain">On-chain</span>
+            </header>
+            <div class="match-teams">
+              <span class="team home">Chelsea</span>
+              <span class="score">2 – 1</span>
+              <span class="team away">Arsenal</span>
+            </div>
+            <div class="match-meta">
+              <span>Match ID: <code>PL-2025-00123</code></span>
+              <span>Final · FT</span>
+            </div>
+            <div class="match-events">
+              <div>
+                <strong>Scorers</strong>
+                <p>Jackson 34', Enzo 71' · Saka 58'</p>
+              </div>
+              <div>
+                <strong>Cards</strong>
+                <p>2x yellow (CHE), 1x yellow (ARS)</p>
+              </div>
+            </div>
+            <footer class="match-footer">
+              <span>BNB status: ready to publish</span>
+              <button class="btn tiny">View details</button>
+            </footer>
+          </article>
+
+          <!-- Match 2 -->
+          <article class="match-card">
+            <header class="match-header">
+              <span class="badge league-badge">Premier League</span>
+              <span class="status-pill status-finished">Finished</span>
+            </header>
+            <div class="match-teams">
+              <span class="team home">Liverpool</span>
+              <span class="score">3 – 0</span>
+              <span class="team away">Spurs</span>
+              </div>
+            <div class="match-meta">
+              <span>Match ID: <code>PL-2025-00124</code></span>
+              <span>Final · FT</span>
+            </div>
+            <div class="match-events">
+              <div>
+                <strong>Scorers</strong>
+                <p>Salah 12', Núñez 44', Díaz 78'</p>
+              </div>
+              <div>
+                <strong>Cards</strong>
+                <p>1x yellow (LIV)</p>
+              </div>
+            </div>
+            <footer class="match-footer">
+              <span>BNB status: queued for oracle</span>
+              <button class="btn tiny">View details</button>
+            </footer>
+          </article>
+
+          <!-- Match 3 -->
+          <article class="match-card">
+            <header class="match-header">
+              <span class="badge league-badge liga">La Liga</span>
+              <span class="status-pill status-live">Live</span>
+            </header>
+            <div class="match-teams">
+              <span class="team home">Real Madrid</span>
+              <span class="score">1 – 1</span>
+              <span class="team away">Barcelona</span>
+            </div>
+            <div class="match-meta">
+              <span>Match ID: <code>LL-2025-00401</code></span>
+              <span>72' · 2nd half</span>
+            </div>
+            <div class="match-events">
+              <div>
+                <strong>Scorers</strong>
+                <p>Vinícius 27' · Lewandowski 53'</p>
+              </div>
+              <div>
+                <strong>Cards</strong>
+                <p>2x yellow (RMA), 2x yellow (BAR)</p>
+              </div>
+            </div>
+            <footer class="match-footer">
+              <span>BNB status: waiting for final</span>
+              <button class="btn tiny">View details</button>
+            </footer>
+          </article>
+
+          <!-- Match 4 -->
+          <article class="match-card">
+            <header class="match-header">
+              <span class="badge league-badge liga">La Liga</span>
+              <span class="status-pill status-scheduled">Scheduled</span>
+            </header>
+            <div class="match-teams">
+              <span class="team home">Atleti</span>
+              <span class="score">–</span>
+              <span class="team away">Sevilla</span>
+            </div>
+            <div class="match-meta">
+              <span>Match ID: <code>LL-2025-00402</code></span>
+              <span>Kick-off: 21:00 (CET)</span>
+            </div>
+            <div class="match-events">
+              <div>
+                <strong>Scorers</strong>
+                <p>No events yet.</p>
+              </div>
+              <div>
+                <strong>Cards</strong>
+                <p>No cards yet.</p>
+              </div>
+            </div>
+            <footer class="match-footer">
+              <span>BNB status: not started</span>
+              <button class="btn tiny">View details</button>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>ScoreFeed App · Demo oracle dashboard</span>
+      <span>© 2025 · Built for Web3 builders</span>
+    </footer>
+  </body>
+</html>
