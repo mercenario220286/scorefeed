@@ -777,3 +777,35 @@ main {
   padding-top: 2.2rem;
   padding-bottom: 2.2rem;
 }
+/* Layout desktop: centrato e con scoreboard più piccolo */
+@media (min-width: 960px) {
+  main {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .hero-main {
+    flex: 1.3;
+  }
+
+  .hero-panel {
+    flex: 1;
+    max-width: 420px;       /* scoreboard più stretto */
+    font-size: 0.9rem;      /* testo leggermente più piccolo */
+    padding: 1.1rem 1.2rem; /* meno “ciccione” */
+  }
+
+  .hero-panel .panel-row {
+    padding: 0.25rem 0.6rem;
+  }
+
+  .hero-panel .panel-title {
+    font-size: 0.85rem;
+  }
+}
