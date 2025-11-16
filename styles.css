@@ -364,50 +364,35 @@ body {
 
 /* Layout mobile */
 @media (max-width: 768px) {
-  .site-header {
-    padding: 16px 16px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;   /* logo a sinistra, hamburger a destra */
-     @media (max-width: 768px) {
+
+    /* HEADER: logo a sinistra, hamburger a destra */
+    .site-header {
+        padding: 16px 16px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Testo logo più piccolo su mobile */
     .logo-text {
         font-size: 18px;
         letter-spacing: 0.06em;
     }
-}
-  }
 
-  .logo-text {
-    font-size: 18px;
-  }
+    /* HAMBURGER VISIBILE E A DESTRA */
+    .nav-toggle {
+        display: flex;
+        margin-left: auto; /* forza a stare tutto a destra */
+    }
 
-  .nav-toggle {
-    display: flex;          /* mobile: si vede */
-  }
-
-  .nav {
-    position: absolute;
-    top: 60px;
-    right: 16px;
-    left: 16px;
-    padding: 16px 20px;
-    border-radius: 18px;
-    background: rgba(1, 12, 8, 0.98);
-    border: 1px solid rgba(50, 255, 157, 0.3);
-    box-shadow: 0 0 22px rgba(24, 255, 120, 0.35);
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .nav.nav-open {
-    display: flex;
-  }
-
-  .nav a {
-    display: block;
-    text-align: right;
-  }
+    /* MENU A TENDINA */
+    .nav {
+        position: absolute;
+        top: 60px;
+        right: 16px;   /* MENU APRE A DESTRA */
+        left: 16px;
+        padding: 16px 20px;
+    }
 }
 /* ==========
    HERO + SCOREBOARD
