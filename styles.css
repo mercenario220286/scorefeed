@@ -90,7 +90,18 @@ body {
 /* --------------------------------------------------
    LOGO CLEAN C-1
 -------------------------------------------------- */
+/* Testo principale del logo */
+.logo-text {
+  font-size: 24px;        /* grandezza principale del logo */
+  font-weight: 600;       /* un po’ bold ma non troppo */
+  letter-spacing: 0.04em; /* leggero spacing elegante */
+}
 
+/* Puntino + "io" leggermente più piccolo */
+.logo-dot {
+  font-size: 0.8em;       /* ~20% più piccolo di "ScoreFeed" */
+  font-weight: 500;       /* un filo più leggero */
+}
 
 /* Navbar */
 .site-header {
