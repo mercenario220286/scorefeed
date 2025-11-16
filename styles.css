@@ -1175,6 +1175,6 @@ card h3 {
 .logo-dot {
     font-size: 0.82em !important;     /* leggermente più piccolo */
     font-weight: 500 !important;
-    margin-left: -3px !important;      /* avvicina .io a ScoreFeed */
+    margin-left: -2.5px !important;      /* avvicina .io a ScoreFeed */
     opacity: 0.95;                    /* tocco elegante */
 }
