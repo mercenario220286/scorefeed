@@ -963,3 +963,128 @@ main {
 .panel-row .match-cell br + span.match-separator {
   display: none;
 }
+/* Base: match cell */
+.match-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* di default, dash visibile */
+.match-separator {
+  padding: 0 4px;
+}
+
+/* Score e status centrati per coerenza */
+.score-cell {
+  text-align: center;
+}
+
+.status-cell {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* STATUS PILL: sempre su una riga e centrata */
+.status-pill {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* DESKTOP – tutto su una riga: Chelsea – Arsenal */
+@media (min-width: 960px) {
+  .hero-panel .panel-row {
+    display: grid;
+    grid-template-columns: 1.8fr 2.3fr 0.7fr 1fr; /* League | Match | Score | Status */
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .hero-panel .panel-row .match-cell {
+    flex-direction: row;
+  }
+
+  .hero-panel .panel-row .team-home,
+  .hero-panel .panel-row .team-away {
+    display: inline;
+  }
+
+  .hero-panel .panel-row .score-cell {
+    text-align: center;
+  }
+
+  .hero-panel .panel-row .status-cell {
+    justify-content: flex-end;
+  }
+
+  .hero-panel .status-pill {
+    font-size: 0.7rem;
+    padding: 0.12rem 0.5rem;
+  }
+
+  .hero-panel .panel-foot {
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+  }
+}
+
+/* MOBILE / TABLET – Real Madrid sopra, Barcelona sotto, senza dash */
+@media (max-width: 959px) {
+  .hero-panel {
+    font-size: 0.85rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .hero-panel .panel-row {
+    display: grid;
+    grid-template-columns: 1.8fr 2.2fr 0.7fr 1fr;
+    align-items: center;
+    column-gap: 0.4rem;
+    padding: 0.25rem 0.3rem;
+  }
+
+  .hero-panel .panel-row .match-cell {
+    flex-direction: column;      /* una squadra sopra, una sotto */
+    align-items: center;
+  }
+
+  .hero-panel .panel-row .team-home,
+  .hero-panel .panel-row .team-away {
+    display: block;
+  }
+
+  /* nascondiamo il trattino quando siamo in modalità "stacked" */
+  .hero-panel .panel-row .match-separator {
+    display: none;
+  }
+
+  .hero-panel .panel-row .score-cell {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .hero-panel .status-cell {
+    justify-content: flex-end;
+  }
+
+  .hero-panel .status-pill {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+  }
+
+  .league-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+
+  .panel-league {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
