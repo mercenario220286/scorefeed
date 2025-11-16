@@ -149,13 +149,14 @@ main {
   background: #08120d;
   border: 1px solid #f3ba2f;
   border-radius: 999px;
-  padding: 6px 14px;
+  padding: 6px 18px;               /* <-- più spazio laterale */
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;                       /* <-- leggermente più distanti */
   cursor: pointer;
   box-shadow: 0 0 10px rgba(243, 186, 47, 0.4);
   transition: 0.15s ease;
+  text-decoration: none;
 }
 
 .btn-bscscan:hover {
@@ -164,20 +165,19 @@ main {
 }
 
 .bscscan-icon {
-  height: 14px;          /* RIDOTTO — era troppo grande */
+  height: 14px;   /* va bene così */
   width: auto;
   display: block;
 }
 
 .bscscan-text {
   color: #f3ba2f;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.2px;
   font-family: inherit;
-  margin-top: 1px;        /* micro-fix per allineamento verticale */
+  text-transform: none;     /* <-- per mantenere “BscScan” corretta */
 }
-
 /* Scoreboard panel */
 
 .hero-panel {
