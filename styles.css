@@ -386,13 +386,22 @@ body {
     }
 
     /* MENU A TENDINA */
-    .nav {
-        position: absolute;
-        top: 60px;
-        right: 16px;   /* MENU APRE A DESTRA */
-        left: 16px;
-        padding: 16px 20px;
-    }
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    left: 16px;
+    padding: 16px 20px;
+
+    /* qui inizia la parte importante */
+    display: none;              /* di default CHIUSO su mobile */
+    flex-direction: column;     /* voci una sotto l’altra */
+    gap: 16px;
+}
+
+/* quando aggiungiamo la classe .nav-open da JS, il menu si vede */
+.nav.nav-open {
+    display: flex;
 }
 /* ==========
    HERO + SCOREBOARD
