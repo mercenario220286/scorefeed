@@ -152,26 +152,34 @@ body {
 
 /* Logo */
 
+/* HEADER LOGO */
+
 .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
+.logo-main,
+.logo-dot {
+    font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: none;      /* niente MAIUSCOLO forzato */
+    font-size: 22px;           /* dimensione desktop */
+}
+
+.logo-main {
+    color: #f4f7ff;            /* bianco caldo */
+}
+
+.logo-dot {
+    color: var(--accent, #32ff6a); /* verde neon del sito */
+}
+
+/* Se esiste .logo-mark non ci serve più */
 .logo-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  background: radial-gradient(circle at 0 0, #32ff9d 0%, #00c56b 55%, #006c3b 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #02130a;
-  box-shadow:
-    0 0 10px rgba(50, 255, 157, 0.6),
-    0 0 26px rgba(50, 255, 157, 0.4);
+    display: none;
 }
 
 .logo-text {
