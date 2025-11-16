@@ -146,37 +146,31 @@ main {
   gap: 12px;
 }
 
-.btn {
-  padding: 10px 18px;
-  border-radius: 4px;
-  border: 1px solid var(--accent);
-  font-size: 12px;
-  text-transform: uppercase;
+/* BscScan button */
+.bsc-btn {
+  background: #050807;
+  border: 1px solid #f3ba2f;
+  color: #f3ba2f;
+  border-radius: 999px;
+  font-family: var(--font-pixel);
+  font-size: 10px;
   letter-spacing: 0.15em;
-  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   cursor: pointer;
-  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
-    filter 0.12s ease-out;
+  transition: .15s;
+  box-shadow: 0 0 8px rgba(243,186,47,0.45);
 }
-
-.btn:hover {
-  filter: brightness(1.08);
-  transform: translateY(-1px);
-  box-shadow: 0 0 12px rgba(58, 255, 101, 0.4);
+.bsc-btn:hover {
+  background: #0b1309;
+  box-shadow: 0 0 12px rgba(243,186,47,0.7);
 }
-
-.btn.primary {
-  background: var(--accent);
-  color: #021104;
-}
-
-.btn.ghost {
-  background: transparent;
-  color: var(--accent);
-}
-
-.btn:hover {
-  filter: brightness(1.1);
+.bsc-btn::before {
+  content: "◎"; /* placeholder per logo BNB */
+  font-size: 9px;
 }
 
 /* Scoreboard panel */
