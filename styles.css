@@ -146,23 +146,32 @@ main {
   gap: 12px;
 }
 
-.bscscan-btn {
-    background: linear-gradient(90deg, #00ff47, #57ffae);
-    border: 1px solid #00ff47;
-    padding: 6px 16px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #0a0a0a;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.btn-bscscan {
+  background: #08120d;
+  border: 1px solid #f3ba2f;
+  border-radius: 999px;
+  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #f3ba2f;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(243, 186, 47, 0.4);
+  transition: 0.15s ease;
 }
 
-.bscscan-btn:hover {
-    background: #00ff47;
-    transform: scale(1.07);
+.btn-bscscan:hover {
+  background: #0c1c14;
+  box-shadow: 0 0 16px rgba(243, 186, 47, 0.7);
+}
+.bscscan-logo {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 /* Scoreboard panel */
 
