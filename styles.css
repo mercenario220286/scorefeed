@@ -145,15 +145,14 @@ main {
   flex-wrap: wrap;
   gap: 12px;
 }
-
 .btn-bscscan {
   background: #08120d;
   border: 1px solid #f3ba2f;
   border-radius: 999px;
-  padding: 4px 12px;
+  padding: 6px 14px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;              /* spazio tra logo e scritta */
+  gap: 8px;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(243, 186, 47, 0.4);
   transition: 0.15s ease;
@@ -161,22 +160,24 @@ main {
 
 .btn-bscscan:hover {
   background: #0c1c14;
-  box-shadow: 0 0 16px rgba(243, 186, 47, 0.7);
+  box-shadow: 0 0 20px rgba(243, 186, 47, 0.7);
 }
 
 .bscscan-icon {
-  height: 18px;         /* dimensione logo */
+  height: 14px;          /* RIDOTTO — era troppo grande */
   width: auto;
   display: block;
 }
 
 .bscscan-text {
   color: #f3ba2f;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   font-family: inherit;
+  margin-top: 1px;        /* micro-fix per allineamento verticale */
 }
+
 /* Scoreboard panel */
 
 .hero-panel {
