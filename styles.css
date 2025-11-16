@@ -91,17 +91,6 @@ body {
    LOGO CLEAN C-1
 -------------------------------------------------- */
 
-.logo-text {
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: 0.08em;
-  text-transform: none;         /* niente più TUTTO MAIUSCOLO */
-  color: var(--text-main);
-}
-
-.logo-dot {
-  color: var(--accent);
-}
 
 .logo-io {
   color: #34ff8a;
@@ -172,6 +161,12 @@ body {
 
 /* HEADER LOGO */
 
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.08em;   /* meno “spaziata” */
+    text-transform: none;     /* niente maiuscole forzate */
+}
 .logo {
     display: flex;
     align-items: center;
@@ -198,14 +193,6 @@ body {
 /* Se esiste .logo-mark non ci serve più */
 .logo-mark {
     display: none;
-}
-
-.logo-text {
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: var(--text-main, #f6fff8);
 }
 
 /* Nav desktop */
