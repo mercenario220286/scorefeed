@@ -92,13 +92,6 @@ body {
 -------------------------------------------------- */
 
 
-.logo-io {
-    color: #34ff8a;
-    text-shadow: 0 0 8px rgba(52, 255, 138, 0.45);
-    font-size: 0.8em;      /* <-- rimpicciolisce lo .io del 20% */
-    font-weight: 500;      /* <-- più elegante e leggero */
-}
-
 /* Navbar */
 .site-header {
   width: 100%;
