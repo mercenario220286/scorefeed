@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="ScoreFeed is a football-native oracle that publishes verified Premier League & La Liga match results on BNB Chain for prediction markets, dApps and AI agents."
+    content="ScoreFeed is a football-first oracle that publishes verified Premier League and La Liga match results on BNB Chain."
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="scanlines"></div>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="logo">
       <span class="logo-mark">SF</span>
@@ -25,131 +24,154 @@
       <a href="#leagues">Leagues</a>
       <a href="#devs">For devs</a>
       <a href="#roadmap">Roadmap</a>
-      <a href="app.html">App</a>
+      <a href="app.html" class="nav-cta">App</a>
     </nav>
   </header>
 
   <main>
     <!-- HERO -->
     <section class="hero">
-     <div class="hero-main">
-  <h1 class="hero-title">The football oracle for Web3 builders.</h1>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          The football oracle for<br />
+          Web3 builders.
+        </h1>
+        <p class="hero-sub">
+          ScoreFeed publishes verified Premier League &amp; La Liga match
+          results directly on BNB Chain.
+        </p>
+        <p class="hero-sub">
+          Clean, structured football data for prediction markets, betting dApps
+          and AI agents.
+        </p>
 
-  <p class="hero-lead">
-    ScoreFeed publishes verified Premier League &amp; La Liga match results directly on BNB Chain.
-  </p>
-
-  <p class="hero-sub">
-    Clean, structured football data for prediction markets, betting dApps and AI agents.
-  </p>
-
-  <div class="hero-cta">
-    <a href="app.html" class="btn btn-primary">Open app</a>
-    <a href="#devs" class="btn btn-secondary">For developers</a>
-  </div>
-
-  <p class="hero-note">
-    Humans watch the match. Smart contracts read ScoreFeed.
-  </p>
-</div>
-
-      <!-- LIVE SCOREBOARD PANEL (demo) -->
-      <div class="hero-panel">
-        <div class="panel-title">LIVE SCOREBOARD</div>
-        <div class="panel-row header">
-          <span>League</span>
-          <span>Match</span>
-          <span>Score</span>
-          <span>Status</span>
+        <div class="hero-actions">
+          <a href="app.html" class="btn primary">Open app</a>
+          <a href="#devs" class="btn secondary">For developers</a>
         </div>
 
- <div id="score-rotator">
-  <!-- Row 1: Premier League -->
-  <div class="panel-row">
-    <span class="panel-league">
-      <img src="premier-league.png" class="league-icon" alt="Premier League" />
-      Premier League
-    </span>
-    <span class="match-cell">
-      <span class="team-home">Chelsea</span>
-      <span class="match-separator">–</span>
-      <span class="team-away">Arsenal</span>
-    </span>
-    <span class="score-cell">2 – 1</span>
-    <span class="status-cell">
-      <span class="status-pill status-onchain">ON CHAIN</span>
-    </span>
-  </div>
-
-  <!-- Row 2: La Liga -->
-  <div class="panel-row">
-    <span class="panel-league">
-      <img src="laliga.png" class="league-icon" alt="La Liga" />
-      La Liga
-    </span>
-    <span class="match-cell">
-      <span class="team-home">Real Madrid</span>
-      <span class="match-separator">–</span>
-      <span class="team-away">Barcelona</span>
-    </span>
-    <span class="score-cell">1 – 1</span>
-    <span class="status-cell">
-      <span class="status-pill status-live">LIVE</span>
-    </span>
-  </div>
-
-  <!-- Row 3: Premier League -->
-  <div class="panel-row">
-    <span class="panel-league">
-      <img src="premier-league.png" class="league-icon" alt="Premier League" />
-      Premier League
-    </span>
-    <span class="match-cell">
-      <span class="team-home">Liverpool</span>
-      <span class="match-separator">–</span>
-      <span class="team-away">Spurs</span>
-    </span>
-    <span class="score-cell">3 – 0</span>
-    <span class="status-cell">
-      <span class="status-pill status-finished">FINAL</span>
-    </span>
-  </div>
-</div>
-
-        <div class="panel-foot">
-          Live UI preview. Oracle feed and on-chain data coming as the MVP goes live.
-        </div>
+        <p class="hero-tagline">
+          Humans watch the match. Smart contracts read ScoreFeed.
+        </p>
       </div>
+
+      <!-- LIVE SCOREBOARD PANEL -->
+      <aside class="hero-panel">
+        <div class="panel-inner">
+          <div class="panel-title">Live scoreboard</div>
+
+          <div class="scoreboard">
+            <div class="panel-row header">
+              <span class="col col-league">League</span>
+              <span class="col col-match">Match</span>
+              <span class="col col-score">Score</span>
+              <span class="col col-status">Status</span>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="panel-row">
+              <span class="col col-league">
+                <img src="premier-league.png" alt="Premier League" class="league-icon" />
+                <span class="league-name">Premier League</span>
+              </span>
+              <span class="col col-match">
+                <span class="match-cell">
+                  <span class="team-home">Chelsea</span>
+                  <span class="match-separator">–</span>
+                  <span class="team-away">Arsenal</span>
+                </span>
+              </span>
+              <span class="col col-score score-cell">
+                2 &ndash; 1
+              </span>
+              <span class="col col-status">
+                <span class="status-pill status-onchain">
+                  <span class="status-line">ON</span>
+                  <span class="status-line">CHAIN</span>
+                </span>
+              </span>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="panel-row">
+              <span class="col col-league">
+                <img src="laliga.png" alt="La Liga" class="league-icon" />
+                <span class="league-name">La Liga</span>
+              </span>
+              <span class="col col-match">
+                <span class="match-cell">
+                  <span class="team-home">Real Madrid</span>
+                  <span class="match-separator">–</span>
+                  <span class="team-away">Barcelona</span>
+                </span>
+              </span>
+              <span class="col col-score score-cell">
+                1 &ndash; 1
+              </span>
+              <span class="col col-status">
+                <span class="status-pill status-live">LIVE</span>
+              </span>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="panel-row">
+              <span class="col col-league">
+              <img src="premier-league.png" alt="Premier League" class="league-icon" />
+                <span class="league-name">Premier League</span>
+              </span>
+              <span class="col col-match">
+                <span class="match-cell">
+                  <span class="team-home">Liverpool</span>
+                  <span class="match-separator">–</span>
+                  <span class="team-away">Spurs</span>
+                </span>
+              </span>
+              <span class="col col-score score-cell">
+                3 &ndash; 0
+              </span>
+              <span class="col col-status">
+                <span class="status-pill status-final">FINAL</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="panel-foot">
+            Live UI preview. Oracle feed and on-chain data coming as the MVP
+            goes live.
+          </div>
+        </div>
+      </aside>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
       <h2>What is ScoreFeed?</h2>
-      <p>
-        ScoreFeed is a football-first oracle that publishes verified match results on BNB Chain.
-        We focus on top-tier leagues and clean, structured data – starting with the Premier League
-        and La Liga.
+      <p class="section-lead">
+        ScoreFeed is a football-first oracle that publishes verified match
+        results on BNB Chain. We focus on top-tier leagues and clean,
+        structured data – starting with the Premier League and La Liga.
       </p>
 
       <div class="grid">
         <div class="card">
           <h3>Football-native</h3>
           <p>
-            Scores, scorers, goal minutes and cards packaged for Web3 builders, not just human viewers.
+            Scores, scorers, goal minutes and cards packaged for Web3 builders,
+            not just human viewers.
           </p>
         </div>
         <div class="card">
           <h3>Oracle-ready</h3>
           <p>
-            Data is fetched from multiple trusted providers, cross-checked and normalized before being
-            pushed on-chain.
+            Data is fetched from multiple trusted providers, cross-checked and
+            normalised before being pushed on-chain.
           </p>
         </div>
         <div class="card">
           <h3>Built on BNB Chain</h3>
           <p>
-            Low fees and EVM compatibility, ideal for prediction markets, betting dApps and AI agents that
-            need reliable football data.
+            Low fees and EVM compatibility, ideal for prediction markets,
+            betting dApps and AI agents that need reliable football data.
           </p>
         </div>
       </div>
@@ -163,22 +185,24 @@
           <div class="step-number">1</div>
           <h3>Collect</h3>
           <p>
-            We fetch match data from multiple trusted football data providers for the leagues we cover.
+            We fetch match data from multiple trusted football data providers
+            for Premier League and La Liga.
           </p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
           <h3>Validate</h3>
           <p>
-            Our engine cross-checks sources, cleans player names and normalizes events into a stable schema.
+            Our AI engine cross-checks sources, cleans player names and
+            normalises events in near real time.
           </p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
           <h3>Publish</h3>
           <p>
-            Final, verified match results are published to the ScoreFeed oracle contract on BNB Chain and
-            exposed via API.
+            Final, verified match results are published to the ScoreFeed oracle
+            contract on BNB and exposed via API.
           </p>
         </div>
       </div>
@@ -186,7 +210,7 @@
 
     <!-- LEAGUES -->
     <section id="leagues" class="section">
-      <h2>Leagues we cover</h2>
+      <h2>Leagues we cover (MVP)</h2>
       <div class="grid">
         <div class="card league">
           <h3>Premier League</h3>
@@ -194,77 +218,76 @@
         </div>
         <div class="card league">
           <h3>La Liga</h3>
-          <p>Same coverage, different country. Data normalized into one shared schema.</p>
+          <p>Same coverage, same oracle – different country.</p>
         </div>
         <div class="card league">
-          <h3>Next up</h3>
-          <p>Planned expansion to Serie A, Bundesliga, Ligue 1 and MLS.</p>
+          <h3>Coming soon</h3>
+          <p>Serie A, Bundesliga, Ligue 1 and MLS.</p>
         </div>
       </div>
     </section>
 
-    <!-- FOR DEVS -->
+    <!-- DEVELOPERS -->
     <section id="devs" class="section">
       <h2>For developers</h2>
-      <div class="grid">
+      <div class="grid dev-grid">
         <div class="card">
-          <h3>On-chain oracle</h3>
+          <h3>Simple data model</h3>
           <p>
-            Solidity smart contract on BNB Chain that exposes a clean interface for reading match results.
+            Each match has a stable ID, league, teams, score, scorers, card
+            events and on-chain status.
           </p>
         </div>
         <div class="card">
-          <h3>Data schema</h3>
-          <p>
-            Stable IDs for leagues, matches and events. Football data structured for composable dApps.
+          <h3>BNB-native contracts</h3>
+          <p>  
+            The oracle contract is optimised for low gas costs and easy
+            integration in prediction markets and dApps.
           </p>
         </div>
         <div class="card">
-          <h3>Integration-ready</h3>
+          <h3>API + docs</h3>
           <p>
-            Built for prediction markets, betting protocols, fantasy games and AI agents that need
-            deterministic football data.
+            REST / JSON feed mirroring the on-chain data, with docs and code
+            examples for quick integration.
           </p>
         </div>
       </div>
-      <p class="note">
-        Full docs and contract ABI will be published when the MVP oracle is live on BNB mainnet.
-      </p>
     </section>
 
     <!-- ROADMAP -->
     <section id="roadmap" class="section">
       <h2>Roadmap</h2>
-      <p>
-        ScoreFeed is starting focused and lean, then expanding to more leagues, features and integrations.
-      </p>
-
       <div class="grid">
         <div class="card">
-          <h3>Phase 1 – Core oracle</h3>
+          <h3>Phase 1 – MVP online</h3>
           <p>
-            Static site, brand and public app live on Vercel. Premier League &amp; La Liga defined as the
-            initial focus with a clear data model for scores, scorers, minutes and cards.
+            Static site, brand and landing page live on Vercel. Premier League
+            &amp; La Liga defined as initial focus, with clear data model for
+            scores, scorers, minutes and cards.
           </p>
         </div>
         <div class="card">
-          <h3>Phase 2 – More leagues</h3>
+          <h3>Phase 2 – Oracle engine</h3>
           <p>
-            Add Serie A, Bundesliga, Ligue 1 and MLS. Expand coverage while keeping one consistent data schema.
+            Backend connects to multiple football data providers. AI layer
+            validates events and prepares final results ready to be pushed on
+            BNB.
           </p>
         </div>
         <div class="card">
-          <h3>Phase 3 – APIs &amp; tools</h3>
+          <h3>Phase 3 – On-chain &amp; dashboard</h3>
           <p>
-            Public HTTP API, SDKs and dashboards for builders. Match history, on-chain links and developer
-            analytics.
+            ScoreFeed oracle contract deployed on BNB mainnet. Matches
+            published automatically. Public dashboard lists fixtures and
+            results, with links to on-chain data.
           </p>
         </div>
         <div class="card">
-          <h3>Phase 4 – Ecosystem</h3>
+          <h3>Phase 4 – More leagues &amp; integrations</h3>
           <p>
-            Dedicated plans for prediction markets, bookmakers, fantasy platforms and AI projects that need
-            football data with on-chain guarantees.
+            Add Serie A, Bundesliga, Ligue 1 and MLS. Open up API access and
+            paid plans for prediction markets, dApps and AI agents.
           </p>
         </div>
       </div>
@@ -273,7 +296,8 @@
 
   <footer class="site-footer">
     <span>ScoreFeed · Pixel football oracle on BNB Chain</span>
-    <span>© 2025 · Built for Web3 builders</span>
+    <span>&copy; 2025 · Built for Web3 builders</span>
   </footer>
 </body>
 </html>
+            
