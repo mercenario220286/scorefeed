@@ -99,8 +99,8 @@ body {
 
 /* Puntino + "io" leggermente più piccolo */
 .logo-dot {
-  font-size: 0.8em;       /* ~20% più piccolo di "ScoreFeed" */
-  font-weight: 500;       /* un filo più leggero */
+  font-size: 0.4em;       /* ~20% più piccolo di "ScoreFeed" */
+  font-weight: 400;       /* un filo più leggero */
 }
 
 /* Navbar */
