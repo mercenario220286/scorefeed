@@ -945,3 +945,21 @@ main {
     padding: 0.15rem 0.45rem;
   }
 }
+/* STATUS PILL – impedisce di andare a capo */
+.status-pill {
+  white-space: nowrap;
+}
+/* Match: se va a capo, nasconde il trattino e rende più pulito */
+.panel-row .match-cell {
+  display: inline;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.panel-row .match-cell span.match-separator {
+  display: inline-block;
+}
+
+.panel-row .match-cell br + span.match-separator {
+  display: none;
+}
