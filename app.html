@@ -65,216 +65,181 @@
         </div>
       </section>
 
-<!-- MATCH CARDS -->
-      <section class="section app-matches">
-        <h2>Match feed (demo)</h2>
-        <div class="match-grid">
-          <!-- Match 1 -->
-          <article class="match-card">
+<section id="feed" class="section">
+    <h2>Match Feed (Demo)</h2>
+
+    <div class="match-grid">
+
+        <!-- CARD 1 -->
+        <article class="match-card">
             <header class="match-header">
-              <span class="badge league-badge">Premier League</span>
-              <span class="status-pill status-onchain">On-chain</span>
+                <span class="badge league-badge">Premier League</span>
+                <span class="status-pill status-live">ON-CHAIN</span>
             </header>
 
-            <div class="match-scoreline">
-              <div class="team-side">
-                <span class="team-name">Chelsea</span>
-                <span class="team-tag">Home</span>
-              </div>
-              <div class="score-main">2 – 1</div>
-              <div class="team-side">
-                <span class="team-name">Arsenal</span>
-                <span class="team-tag">Away</span>
-              </div>
+            <div class="match-score-row">
+                <div class="team">Chelsea <span>HOME</span></div>
+                <div class="score">2 – 1</div>
+                <div class="team">Arsenal <span>AWAY</span></div>
             </div>
 
-            <div class="match-meta">
-              <span>Match ID: <code>PL-2025-00123</code></span>
-              <span>Final · FT</span>
+            <p class="match-id">Match ID: PL-2025-00123</p>
+            <p class="match-final">Final · FT</p>
+
+            <div class="match-row">
+                <div class="row-label">Scorers</div>
+                <div class="row-value">
+                    <ul>
+                        <li>Jackson 34' (CHE)</li>
+                        <li>Enzo 71' (CHE)</li>
+                        <li>Saka 58' (ARS)</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="match-row">
-              <div class="row-label">Scorers</div>
-              <div class="row-value">
-                <ul>
-                  <li>Jackson 34' (CHE)</li>
-                  <li>Enzo 71' (CHE)</li>
-                  <li>Saka 58' (ARS)</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="match-row">
-              <div class="row-label">Cards</div>
-              <div class="row-value">
-                <ul>
-                  <li>Gallagher 41' – yellow (CHE)</li>
-                  <li>James 76' – yellow (CHE)</li>
-                  <li>Gabriel 63' – yellow (ARS)</li>
-                </ul>
-              </div>
+                <div class="row-label">Cards</div>
+                <div class="row-value">
+                    <ul>
+                        <li>Gallagher 41' — yellow (CHE)</li>
+                        <li>James 76' — yellow (CHE)</li>
+                        <li>Gabriel 63' — yellow (ARS)</li>
+                    </ul>
+                </div>
             </div>
 
             <footer class="match-footer">
-              <div class="bnb-status">
-                <span class="bnb-dot"></span>
-                <span>BNB status: ready to publish</span>
-              </div>
-              <a class="bscscan-link" href="#" target="_blank">
-  <img src="https://bscscan.com/images/logo-bscscan.svg" alt="bscscan" class="bscscan-icon">
-  <span>Scan</span>
-</a>
+                <div class="bnb-status">
+                    <span class="bnb-dot"></span>
+                    BNB status: ready to publish
+                </div>
+                <button class="bscscan-btn">BSCSCAN</button>
             </footer>
-          </article>
+        </article>
 
-          <!-- Match 2 -->
-          <article class="match-card">
+        <!-- CARD 2 -->
+        <article class="match-card">
             <header class="match-header">
-              <span class="badge league-badge">Premier League</span>
-              <span class="status-pill status-finished">Finished</span>
+                <span class="badge league-badge">Premier League</span>
+                <span class="status-pill status-finished">FINISHED</span>
             </header>
 
-            <div class="match-scoreline">
-              <div class="team-side">
-                <span class="team-name">Liverpool</span>
-                <span class="team-tag">Home</span>
-              </div>
-              <div class="score-main">3 – 0</div>
-              <div class="team-side">
-                <span class="team-name">Spurs</span>
-                <span class="team-tag">Away</span>
-              </div>
+            <div class="match-score-row">
+                <div class="team">Liverpool <span>HOME</span></div>
+                <div class="score">3 – 0</div>
+                <div class="team">Spurs <span>AWAY</span></div>
             </div>
 
-            <div class="match-meta">
-              <span>Match ID: <code>PL-2025-00124</code></span>
-              <span>Final · FT</span>
+            <p class="match-id">Match ID: PL-2025-00124</p>
+            <p class="match-final">Final · FT</p>
+
+            <div class="match-row">
+                <div class="row-label">Scorers</div>
+                <div class="row-value">
+                    <ul>
+                        <li>Salah 12' (LIV)</li>
+                        <li>Núñez 44' (LIV)</li>
+                        <li>Diaz 78' (LIV)</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="match-row">
-              <div class="row-label">Scorers</div>
-              <div class="row-value">
-                <ul>
-                  <li>Salah 12' (LIV)</li>
-                  <li>Núñez 44' (LIV)</li>
-                  <li>Díaz 78' (LIV)</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="match-row">
-              <div class="row-label">Cards</div>
-              <div class="row-value">
-                <ul>
-                  <li>Romero 51' – yellow (TOT)</li>
-                </ul>
-              </div>
+                <div class="row-label">Cards</div>
+                <div class="row-value">
+                    <ul>
+                        <li>Romero 51' — yellow (TOT)</li>
+                    </ul>
+                </div>
             </div>
 
             <footer class="match-footer">
-              <div class="bnb-status">
-                <span class="bnb-dot"></span>
-                <span>BNB status: queued for oracle</span>
-              </div>
-              <button class="btn tiny bsc-btn">BscScan ▸</button>
+                <div class="bnb-status">
+                    <span class="bnb-dot"></span>
+                    BNB status: queued for oracle
+                </div>
+                <button class="bscscan-btn">BSCSCAN</button>
             </footer>
-          </article>
+        </article>
 
-          <!-- Match 3 -->
-          <article class="match-card">
+        <!-- CARD 3 -->
+        <article class="match-card">
             <header class="match-header">
-              <span class="badge league-badge liga">La Liga</span>
-              <span class="status-pill status-live">Live</span>
+                <span class="badge league-badge laliga">La Liga</span>
+                <span class="status-pill status-live">LIVE</span>
             </header>
-            <div class="match-scoreline">
-              <div class="team-side">
-                <span class="team-name">Real Madrid</span>
-                <span class="team-tag">Home</span>
-              </div>
-              <div class="score-main">1 – 1</div>
-              <div class="team-side">
-                <span class="team-name">Barcelona</span>
-                <span class="team-tag">Away</span>
-              </div>
+
+            <div class="match-score-row">
+                <div class="team">Real Madrid <span>HOME</span></div>
+                <div class="score">1 – 1</div>
+                <div class="team">Barcelona <span>AWAY</span></div>
             </div>
 
-            <div class="match-meta">
-              <span>Match ID: <code>LL-2025-00401</code></span>
-              <span>72' · 2nd half</span>
+            <p class="match-id">Match ID: LL-2025-00481</p>
+            <p class="match-final">72' · 2nd half</p>
+
+            <div class="match-row">
+                <div class="row-label">Scorers</div>
+              <div class="row-value">
+                    <ul>
+                        <li>Vini Jr 27' (RMA)</li>
+                        <li>Lewandowski 53' (BAR)</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="match-row">
-              <div class="row-label">Scorers</div>
-              <div class="row-value">
-                <ul>
-                  <li>Vinícius 27' (RMA)</li>
-                  <li>Lewandowski 53' (BAR)</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="match-row">
-              <div class="row-label">Cards</div>
-              <div class="row-value">
-                <ul>
-                  <li>Rüdiger 39' – yellow (RMA)</li>
-                  <li>Camavinga 68' – yellow (RMA)</li>
-                  <li>Araujo 45' – yellow (BAR)</li>
-                  <li>Gündogan 70' – yellow (BAR)</li>
-                </ul>
-              </div>
+                <div class="row-label">Cards</div>
+                <div class="row-value">
+                    <ul>
+                        <li>Rüdiger 39' — yellow (RMA)</li>
+                        <li>Camavinga 68' — yellow (RMA)</li>
+                        <li>Araujo 45' — yellow (BAR)</li>
+                        <li>Gündogan 70' — yellow (BAR)</li>
+                    </ul>
+                </div>
             </div>
 
             <footer class="match-footer">
-              <div class="bnb-status">
-                <span class="bnb-dot"></span>
-                <span>BNB status: waiting for final</span>
-              </div>
-              <button class="btn tiny bsc-btn">BscScan ▸</button>
+                <div class="bnb-status">
+                    <span class="bnb-dot"></span>
+                    BNB status: waiting for final
+                </div>
+                <button class="bscscan-btn">BSCSCAN</button>
             </footer>
-          </article>
+        </article>
 
-          <!-- Match 4 -->
-          <article class="match-card">
+        <!-- CARD 4 -->
+        <article class="match-card">
             <header class="match-header">
-              <span class="badge league-badge liga">La Liga</span>
-              <span class="status-pill status-scheduled">Scheduled</span>
+                <span class="badge league-badge laliga">La Liga</span>
+                <span class="status-pill status-scheduled">SCHEDULED</span>
             </header>
 
-            <div class="match-scoreline">
-              <div class="team-side">
-                <span class="team-name">Atleti</span>
-                <span class="team-tag">Home</span>
-              </div>
-              <div class="score-main">–</div>
-              <div class="team-side">
-                <span class="team-name">Sevilla</span>
-                <span class="team-tag">Away</span>
-              </div>
-            </div>
+            <p class="match-id">Match ID: LL-2025-00482</p>
+            <p class="kickoff">Kick-off: 21:00 (CET)</p>
 
-            <div class="match-meta">
-              <span>Match ID: <code>LL-2025-00402</code></span>
-              <span>Kick-off: 21:00 (CET)</span>
+            <div class="match-row">
+                <div class="row-label">Scorers</div>
+                <div class="row-value">No events yet.</div>
             </div>
 
             <div class="match-row">
-              <div class="row-label">Scorers</div>
-              <div class="row-value">
-                <ul>
-                  <li>No events yet.</li>
-                </ul>
-              </div>
+                <div class="row-label">Cards</div>
+                <div class="row-value">No cards yet.</div>
             </div>
 
-            <div class="match-row">
-              <div class="row-label">Cards</div>
-              <div class="row-value">
-                <ul>
-                  <li>No cards yet.</li>
-                </ul>
-              </div>
-            </div>
+            <footer class="match-footer">
+                <div class="bnb-status">
+                    <span class="bnb-dot"></span>
+                    BNB status: not started
+                </div>
+                <button class="bscscan-btn">BSCSCAN</button>
+            </footer>
+        </article>
+
+    </div>
+</section>
 
             <footer class="match-footer">
               <div class="bnb-status">
