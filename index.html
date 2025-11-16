@@ -309,6 +309,17 @@
     <span>ScoreFeed · Pixel football oracle on BNB Chain</span>
     <span>&copy; 2025 · Built for Web3 builders</span>
   </footer>
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+      navToggle.classList.toggle('nav-toggle-open');
+    });
+  }
+</script>
 </body>
 </html>
             
