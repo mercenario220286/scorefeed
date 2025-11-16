@@ -1171,8 +1171,10 @@ card h3 {
     color: #011108;                 /* il testo NON diventa nero su nero */
 }
 
-/* Fix dimensione .io (forzato) */
+/* Logo .io definitivo */
 .logo-dot {
-    font-size: 0.75em !important;
+    font-size: 0.82em !important;     /* leggermente più piccolo */
     font-weight: 500 !important;
+    margin-left: 2px !important;      /* avvicina .io a ScoreFeed */
+    opacity: 0.95;                    /* tocco elegante */
 }
