@@ -805,6 +805,17 @@ main {
     padding: 0.25rem 0.6rem;
   }
 
+  .league-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+.panel-league {
+  display: inline-flex;
+  align-items: center;
+}
   .hero-panel .panel-title {
     font-size: 0.85rem;
   }
