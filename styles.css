@@ -144,6 +144,17 @@ main {
   color: #6fd36f;
   max-width: 26rem;
 }
+@media (min-width: 900px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero-lead {
+    font-size: 1.05rem;
+  }
+  .hero-sub {
+    font-size: 1rem;
+  }
+}
 .btn-bscscan {
   background: #08120d !important;
   border: 1px solid #f3ba2f !important;
