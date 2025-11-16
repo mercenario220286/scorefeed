@@ -861,3 +861,34 @@ main {
     margin-right: 4px;
   }
 }
+/* MOBILE / TABLET: scoreboard leggibile e non enorme */
+@media (max-width: 959px) {
+  .hero-panel {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .hero-panel .panel-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1.4fr; /* riga 1: League+logo | Match */
+    grid-template-rows: auto auto;      /* riga 2: Score + Status */
+    row-gap: 0.15rem;
+    padding: 0.25rem 0.3rem;
+  }
+
+  .hero-panel .panel-row span:nth-child(3) { /* Score */
+    font-weight: 600;
+  }
+
+  .hero-panel .panel-row span:nth-child(3),
+  .hero-panel .panel-row span:nth-child(4) { /* Score + Status sotto */
+    margin-top: 0.05rem;
+  }
+
+  .league-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+}
