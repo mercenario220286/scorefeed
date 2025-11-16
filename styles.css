@@ -708,3 +708,8 @@ main {
   border-color: #f3ba2f;
   color: #f3ba2f;
 }
+.match-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
