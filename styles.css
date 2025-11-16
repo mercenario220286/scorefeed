@@ -765,3 +765,15 @@ main {
     flex-direction: column;
     justify-content: space-between;
 }
+/* Più spazio orizzontale su tutte le sezioni principali */
+.hero,
+.section {
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+/* Un po' più di spazio sopra/sotto l'hero */
+.hero {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+}
