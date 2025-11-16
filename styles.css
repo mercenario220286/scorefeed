@@ -95,12 +95,15 @@ body {
 -------------------------------------------------- */
 
 .logo-text {
-  font-family: "Inter", sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #e6fff8;
-  text-shadow: 0 0 6px rgba(80, 255, 180, 0.25);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: none;         /* niente più TUTTO MAIUSCOLO */
+  color: var(--text-main);
+}
+
+.logo-dot {
+  color: var(--accent);
 }
 
 .logo-io {
