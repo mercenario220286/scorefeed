@@ -363,6 +363,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;   /* logo a sinistra, hamburger a destra */
+     @media (max-width: 768px) {
+    .logo-text {
+        font-size: 18px;
+        letter-spacing: 0.06em;
+    }
+}
   }
 
   .logo-text {
