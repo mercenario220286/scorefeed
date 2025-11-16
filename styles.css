@@ -1170,4 +1170,9 @@ card h3 {
     transform: translateY(-1px);
     color: #011108;                 /* il testo NON diventa nero su nero */
 }
-  
+
+/* Fix dimensione .io (forzato) */
+.logo-dot {
+    font-size: 0.75em !important;
+    font-weight: 500 !important;
+}
