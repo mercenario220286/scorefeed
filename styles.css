@@ -146,36 +146,36 @@ main {
   gap: 12px;
 }
 .btn-bscscan {
-  background: #08120d;
-  border: 1px solid #f3ba2f;
-  border-radius: 999px;
-  padding: 8px 22px 8px 18px;  /* <-- più spazio a destra e bilanciamento */
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;                   /* <-- leggero aumento dello spazio logo-testo */
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(243, 186, 47, 0.55);
-  transition: 0.15s ease;
-  text-decoration: none;
+  background: #08120d !important;
+  border: 1px solid #f3ba2f !important;
+  border-radius: 999px !important;
+  padding: 10px 28px 10px 16px !important; /* <-- più spazio a destra */
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  box-shadow: 0 0 14px rgba(243, 186, 47, 0.55) !important;
+  transition: 0.15s ease !important;
+  text-decoration: none !important;
 }
 
 .btn-bscscan:hover {
-  background: #0c1c14;
-  box-shadow: 0 0 18px rgba(243, 186, 47, 0.75);
+  background: #0c1c14 !important;
+  box-shadow: 0 0 22px rgba(243, 186, 47, 0.85) !important;
 }
 
 .bscscan-icon {
-  height: 16px;   /* leggermente più grande e più visibile */
-  width: auto;
+  height: 18px !important;
+  width: auto !important;
 }
 
 .bscscan-text {
-  color: #f3ba2f;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  text-transform: none;  /* mantiene “BscScan” originale */
-  font-family: inherit;
+  color: #f3ba2f !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2px !important;
+  text-transform: none !important; /* mantiene "BscScan" */
+  font-family: inherit !important;
 }
 /* Scoreboard panel */
 
