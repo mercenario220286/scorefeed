@@ -828,3 +828,36 @@ main {
   font-size: 0.75rem;        /* leggermente più grande */
   font-weight: 600;
 }
+/* DESKTOP: scoreboard più piccolo e pulito */
+@media (min-width: 960px) {
+  .hero {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .hero-main {
+    flex: 1.4;
+  }
+
+  .hero-panel {
+    flex: 1;
+    max-width: 380px;        /* prima era più grosso */
+    padding: 0.9rem 1rem;
+    font-size: 0.88rem;
+  }
+
+  .hero-panel .panel-row {
+    display: grid;
+    grid-template-columns: 1.7fr 2.2fr 0.7fr 0.9fr; /* League | Match | Score | Status */
+    align-items: center;
+    column-gap: 0.4rem;
+    padding: 0.25rem 0.4rem;
+  }
+
+  .league-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+}
