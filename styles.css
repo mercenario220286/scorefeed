@@ -186,6 +186,36 @@ main {
   letter-spacing: 0.2px;
   text-transform: none; /* mantiene “BscScan” come nel logo ufficiale */
 }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #33ff77;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1cff6a;
+  color: #02140b;
+  box-shadow: 0 0 12px rgba(51, 255, 122, 0.7);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #9fe3a2;
+  border-color: #21c75a;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(51, 255, 122, 0.9);
+}
 /* Scoreboard panel */
 
 .hero-panel {
