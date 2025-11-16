@@ -900,3 +900,48 @@ main {
     padding: 0.12rem 0.45rem;
   }
 }
+/* MOBILE / TABLET – Live scoreboard come desktop: League | Match | Score | Status */
+@media (max-width: 959px) {
+  .hero-panel {
+    font-size: 0.85rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .hero-panel .panel-row {
+    display: grid;
+    grid-template-columns: 1.8fr 2.2fr 0.7fr 1fr;  /* League | Match | Score | Status */
+    align-items: center;
+    column-gap: 0.4rem;
+    padding: 0.25rem 0.3rem;
+  }
+
+  /* Score centrato */
+  .hero-panel .panel-row span:nth-child(3) {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* Status pill a destra */
+  .hero-panel .panel-row span:nth-child(4) {
+    justify-self: end;
+  }
+
+  /* Logo + nome lega compatti */
+  .league-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+
+  .panel-league {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Pill più corte */
+  .hero-panel .status-pill {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+  }
+}
