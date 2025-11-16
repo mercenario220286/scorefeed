@@ -150,17 +150,12 @@ main {
   background: #08120d;
   border: 1px solid #f3ba2f;
   border-radius: 999px;
-  padding: 6px 14px;
+  padding: 4px 10px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
   cursor: pointer;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #f3ba2f;
-  font-weight: 600;
-  box-shadow: 0 0 12px rgba(243, 186, 47, 0.4);
+  box-shadow: 0 0 10px rgba(243, 186, 47, 0.4);
   transition: 0.15s ease;
 }
 
@@ -168,9 +163,10 @@ main {
   background: #0c1c14;
   box-shadow: 0 0 16px rgba(243, 186, 47, 0.7);
 }
-.bscscan-logo {
-  width: 16px;
-  height: 16px;
+
+/* immagine logo dentro il bottone */
+.btn-bscscan img {
+  height: 18px;       /* dimensione logo */
   display: block;
 }
 /* Scoreboard panel */
