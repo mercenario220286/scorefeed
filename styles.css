@@ -170,12 +170,11 @@ main {
 }
 
 .bscscan-text {
-  color: #f3ba2f !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.2px !important;
-  text-transform: none !important; /* mantiene "BscScan" */
-  font-family: inherit !important;
+  color: #f3ba2f;
+  font-size: 14px;      /* prima era più grande */
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-transform: none; /* mantiene “BscScan” come nel logo ufficiale */
 }
 /* Scoreboard panel */
 
