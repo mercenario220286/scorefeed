@@ -68,17 +68,14 @@ body {
 /* ===== HEADER / NAVBAR ===== */
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  padding: 18px 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.88),
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.5)
-  );
-  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 10;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 32px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-inner {
@@ -375,7 +372,10 @@ body {
 /* Layout mobile */
 @media (max-width: 768px) {
   .site-header {
-    padding-inline: 16px;
+    padding: 16px 16px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* logo a sinistra, hamburger a destra */
   }
 
   .logo-text {
@@ -408,57 +408,6 @@ body {
   .nav a {
     display: block;
     text-align: right;
-  }
-}
-/* Layout mobile */
-
-@media (max-width: 768px) {
-  .nav {
-    position: absolute;
-    top: 58px;
-    right: 16px;
-    left: 16px;
-    padding: 10px 14px 14px;
-    border-radius: 16px;
-    background: rgba(1, 10, 7, 0.96);
-    border: 1px solid rgba(50, 255, 157, 0.25);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    transform-origin: top right;
-    transform: scaleY(0.85);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.16s ease, transform 0.16s ease;
-     @media (max-width: 768px) {
-    .site-header {
-        padding: 12px 18px;
-    }
-
-    .logo-main,
-    .logo-dot {
-        font-size: 18px;      /* più piccolo su mobile */
-        letter-spacing: 0.06em;
-    }
-}
-  }
-
-  .nav.nav-open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: scaleY(1);
-  }
-
-  .nav-cta {
-    width: 100%;
-    justify-content: center;
-    margin-left: 0;
-    margin-top: 6px;
-  }
-
-  .nav-toggle {
-    display: flex;
   }
 }
 /* ==========
