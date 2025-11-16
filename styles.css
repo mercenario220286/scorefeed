@@ -828,31 +828,58 @@ main {
   font-size: 0.75rem;        /* leggermente più grande */
   font-weight: 600;
 }
-/* DESKTOP: scoreboard più piccolo e pulito */
+/* DESKTOP – rifinitura scoreboard */
 @media (min-width: 960px) {
-  .hero {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
+  .hero-panel .panel-row {
+    display: grid;
+    grid-template-columns: 1.8fr 2.3fr 0.7fr 0.9fr; /* League | Match | Score | Status */
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.3rem 0.5rem;
   }
 
-  .hero-main {
-    flex: 1.4;
+  .hero-panel .panel-row span:nth-child(3) {
+    text-align: center;     /* score centrato */
   }
 
+  .hero-panel .panel-row span:nth-child(4) {
+    justify-self: end;      /* pill allineato a destra */
+  }
+
+  /* pill più compatte, testo un filo più piccolo */
+  .hero-panel .status-pill {
+    font-size: 0.7rem;
+    padding: 0.12rem 0.5rem;
+  }
+
+  /* testo in fondo "Live UI preview..." leggermente più grande */
+  .hero-panel .panel-foot {
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+  }
+}
+/* MOBILE / TABLET – pulizia scoreboard */
+@media (max-width: 959px) {
   .hero-panel {
-    flex: 1;
-    max-width: 380px;        /* prima era più grosso */
-    padding: 0.9rem 1rem;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
+    padding: 0.8rem 0.9rem;
   }
 
   .hero-panel .panel-row {
     display: grid;
-    grid-template-columns: 1.7fr 2.2fr 0.7fr 0.9fr; /* League | Match | Score | Status */
-    align-items: center;
-    column-gap: 0.4rem;
-    padding: 0.25rem 0.4rem;
+    grid-template-columns: 1.8fr 1.6fr; /* (League+logo) | Match */
+    grid-template-rows: auto auto;      /* sotto: Score + Status */
+    row-gap: 0.15rem;
+    padding: 0.28rem 0.35rem;
+  }
+
+  .hero-panel .panel-row span:nth-child(3) {
+    font-weight: 600;
+    text-align: left;       /* es. "2 – 1" */
+  }
+
+  .hero-panel .panel-row span:nth-child(4) {
+    justify-self: end;      /* pill a destra, ma non gigante */
   }
 
   .league-icon {
@@ -860,35 +887,16 @@ main {
     height: 14px;
     margin-right: 4px;
   }
-}
-/* MOBILE / TABLET: scoreboard leggibile e non enorme */
-@media (max-width: 959px) {
-  .hero-panel {
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-    padding: 0.8rem 0.9rem;
+
+  .panel-league {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;               /* logo + testo più “aggruppati” */
   }
 
-  .hero-panel .panel-row {
-    display: grid;
-    grid-template-columns: 1.6fr 1.4fr; /* riga 1: League+logo | Match */
-    grid-template-rows: auto auto;      /* riga 2: Score + Status */
-    row-gap: 0.15rem;
-    padding: 0.25rem 0.3rem;
-  }
-
-  .hero-panel .panel-row span:nth-child(3) { /* Score */
-    font-weight: 600;
-  }
-
-  .hero-panel .panel-row span:nth-child(3),
-  .hero-panel .panel-row span:nth-child(4) { /* Score + Status sotto */
-    margin-top: 0.05rem;
-  }
-
-  .league-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 6px;
+  /* pill meno lunghe su mobile */
+  .hero-panel .status-pill {
+    font-size: 0.72rem;
+    padding: 0.12rem 0.45rem;
   }
 }
