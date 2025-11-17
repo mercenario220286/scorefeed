@@ -157,14 +157,18 @@ body {
 /* --------------------------------------------------
    LOGO CLEAN C-1
 -------------------------------------------------- */
-/* Navbar – desktop base */
+/* Navbar – desktop base (versione PRO) */
 
 .site-header {
   width: 100%;
-  padding: 22px 40px;
+  padding: 20px clamp(32px, 6vw, 80px); /* più respiro ai lati */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 30px rgba(24, 255, 99, 0.08); /* glow soft sotto l’header */
 }
 
 /* logo a sinistra */
@@ -182,29 +186,83 @@ body {
 }
 
 .logo-dot {
-  font-size: 0.85em;      /* ".io" leggermente più piccolo */
+  font-size: 0.85em; /* ".io" leggermente più piccolo */
 }
 
 /* link di navigazione – desktop */
 
 .nav {
   display: flex;
-  gap: 26px;
   align-items: center;
+  gap: 32px;      /* più spazio tra le voci */
+  font-size: 14px;
 }
 
 .nav a {
   color: #c7e2d6;
   font-size: 14px;
   text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.15s ease, transform 0.1s ease;
 }
 
-.nav a:hover {
-  color: #ffffff;
+/* underline neon solo sui link normali (non sulla CTA) */
+.nav a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #32ff9d, #00e0ff);
+  transition: width 0.18s ease-out;
+}
+
+@media (hover: hover) {
+  .nav a:not(.nav-cta):hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .nav a:not(.nav-cta):hover::after {
+    width: 100%;
+  }
+}
+
+/* CTA "Open app" nell’header */
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  background: radial-gradient(
+    circle at 0 0,
+    #36ff93 0,
+    #009e46 55%,
+    #007a35 100%
+  );
+  color: #04130a !important;
+  border: 1px solid rgba(54, 255, 147, 0.8);
+  box-shadow: 0 0 18px rgba(54, 255, 147, 0.55);
+  text-decoration: none;
+  transition: transform 0.1s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+@media (hover: hover) {
+  .nav-cta:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 0 26px rgba(54, 255, 147, 0.85);
+  }
 }
 
 /* hamburger: nascosto su desktop */
-
 .nav-toggle {
   display: none;
 }
