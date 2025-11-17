@@ -216,37 +216,44 @@ body {
 
 @media (max-width: 768px) {
 
+  /* HEADER MOBILE: logo a sinistra, hamburger a destra */
   .site-header {
-    padding: 16px 18px 8px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* <- questo allinea logo e hamburger */
   }
 
+  /* Logo mobile leggermente più piccolo */
   .logo-text {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  /* hamburger visibile a destra del logo */
+  .logo-dot {
+    font-size: 0.8em;
+  }
 
+  /* Hamburger button */
   .nav-toggle {
     display: flex;
-    width: 38px;
+    width: 40px;
     height: 32px;
-    border-radius: 999px;
-    border: 1px solid rgba(50, 255, 157, 0.7);
-    background: rgba(1, 12, 8, 0.95);
-    padding: 0;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 5px;
+    background: rgba(1, 12, 8, 0.96);
+    border: 1px solid rgba(52, 255, 138, 0.7);
+    border-radius: 999px;
   }
 
   .nav-toggle span {
-    display: block;
-    width: 18px;
     height: 2px;
+    width: 18px;
+    background: #e8fdf3;
     border-radius: 999px;
-    background: #e5f5ff;
   }
+}
 
   /* menu a tendina */
 
