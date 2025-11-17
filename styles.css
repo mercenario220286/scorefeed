@@ -154,30 +154,91 @@ body {
     width: 100%;
   }
 }
-/* ===============================
-  /* Layout mobile */
-@media (max-width: 768px) {
-  .site-header {
-    padding: 16px 16px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;   /* logo a sx, hamburger a dx */
-  }
+/* --------------------------------------------------
+   LOGO CLEAN C-1
+-------------------------------------------------- */
+/* Navbar – desktop base */
 
-  .nav-toggle {
-    display: flex;     /* su mobile SI vede */
-    margin: 0;         /* niente spostamenti strani in basso */
-  }
-
-  /* ➜ NON toccare le altre regole qui dentro (.nav, ecc.) */
+.site-header {
+  width: 100%;
+  padding: 22px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-  
+
+/* logo a sinistra */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.logo-dot {
+  font-size: 0.85em;      /* ".io" leggermente più piccolo */
+}
+
+/* link di navigazione – desktop */
+
+.nav {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav a {
+  color: #c7e2d6;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* hamburger: nascosto su desktop */
+
+.nav-toggle {
+  display: none;
+}
+
+
+/* ===============================
+   LAYOUT MOBILE (max 768px)
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 16px 18px 8px;
+  }
+
   .logo-text {
     font-size: 18px;
   }
 
   /* hamburger visibile a destra del logo */
 
+  .nav-toggle {
+    display: flex;
+    width: 38px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(50, 255, 157, 0.7);
+    background: rgba(1, 12, 8, 0.95);
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
 
   .nav-toggle span {
     display: block;
@@ -958,4 +1019,3 @@ card h3 {
     padding: 4px 10px;
   }
 }
-
