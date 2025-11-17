@@ -358,46 +358,28 @@ body {
   .nav a {
     font-size: 16px;
   }
-   /* CTA nel menu mobile: bottone verde neon come hero */
+/* CTA nel menu mobile: stesso stile del bottone hero */
 nav a.nav-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 
-  padding: 14px 28px;
+  padding: 12px 26px;
   border-radius: 999px;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
 
-  color: #012d06;
-  background: linear-gradient(135deg, #32ff76, #00c04b);
-  border: 1px solid rgba(50, 255, 140, 0.9);
-
-  box-shadow:
-    0 0 14px rgba(0, 255, 115, 0.6),
-    inset 0 0 15px rgba(0, 255, 115, 0.4);
+  background: radial-gradient(circle at 0 0, #36ff93 0, #009e46 55%, #007a35 100%);
+  color: #04130a;
+  border: 1px solid rgba(54, 255, 147, 0.8);
+  box-shadow: 0 0 18px rgba(54, 255, 147, 0.55);
 
   width: 100%;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 12px;
 }
-   /* puntino LIVE dentro al bottone */
-nav a.nav-cta::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-
-  background: #ffb52b;
-  box-shadow: 0 0 10px rgba(255, 181, 43, 0.8);
-
-  animation: livePulse 1.3s infinite ease-out;
-}
-  
-
   .nav a.nav-cta:hover {
     transform: translateY(-1px);
     box-shadow: 0 0 24px rgba(54, 255, 147, 0.9);
