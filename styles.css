@@ -367,11 +367,11 @@ body {
 
     /* HEADER: logo a sinistra, hamburger a destra */
     .site-header {
-        padding: 16px 16px 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    padding: 12px 16px;      /* riduce lo spazio verticale */
+    display: flex;
+    align-items: center;     /* allinea logo e hamburger sulla stessa linea */
+    justify-content: space-between;
+}
 
     /* Testo logo più piccolo su mobile */
     .logo-text {
