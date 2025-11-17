@@ -221,25 +221,23 @@ body {
     padding: 16px 18px;
     display: flex;
     align-items: center;
-    justify-content: space-between;   /* <- questo allinea logo e hamburger */
+    justify-content: space-between; /* allinea logo e hamburger */
   }
 
   /* Logo mobile leggermente più piccolo */
   .logo-text {
     font-size: 20px;
   }
-   .logo {
+
+  .logo {
     margin-left: 8px;
-}
+  }
 
   .logo-dot {
     font-size: 0.8em;
   }
 
   /* Hamburger button */
-   .nav-toggle {
-    margin-top: -4px; /* lo alza un pochino */
-}
   .nav-toggle {
     display: flex;
     width: 40px;
@@ -251,6 +249,7 @@ body {
     background: rgba(1, 12, 8, 0.96);
     border: 1px solid rgba(52, 255, 138, 0.7);
     border-radius: 999px;
+    margin-top: -3px; /* riallinea verticalmente */
   }
 
   .nav-toggle span {
@@ -259,10 +258,8 @@ body {
     background: #e8fdf3;
     border-radius: 999px;
   }
-}
 
-  /* menu a tendina */
-
+  /* Menu a tendina */
   .nav {
     position: fixed;
     top: 64px;
@@ -272,7 +269,7 @@ body {
     border-radius: 24px;
     background: rgba(3, 10, 6, 0.98);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
-    display: none;         /* chiuso di default */
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
@@ -283,26 +280,11 @@ body {
     font-size: 16px;
   }
 
-  /* quando JS aggiunge .nav-open, il menu si apre */
-
+  /* quando JS aggiunge .nav-open */
   .nav.nav-open {
     display: flex;
   }
 }
-.logo-text {
-  font-family: "Inter", sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #e6fff8;
-  text-shadow: 0 0 6px rgba(80, 255, 180, 0.25);
-}
-
-.logo-io {
-  color: #34ff8a;
-  text-shadow: 0 0 8px rgba(52, 255, 138, 0.45);
-}
-
 
 /* ==========
    HERO + SCOREBOARD
@@ -957,42 +939,6 @@ card h3 {
 
   .match-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .nav {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  main {
-    padding-inline: 4vw;
-  }
-
-  .grid,
-  .steps {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .match-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .panel-row {
-    grid-template-columns: 1.5fr 2fr 0.9fr 1.4fr;
-    padding-inline: 10px;
-  }
-
-  .site-footer {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
