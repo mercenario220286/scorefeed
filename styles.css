@@ -81,65 +81,6 @@ body {
   font-weight: 400;       /* un filo più leggero */
 }
 
-/* Navbar */
-.site-header {
-  width: 100%;
-  padding: 22px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav {
-  display: flex;
-  gap: 26px;
-  align-items: center;
-}
-
-.nav a {
-  color: #c7e2d6;
-  text-decoration: none;
-  font-size: 15px;
-  opacity: 0.9;
-  transition: 0.2s;
-}
-
-.nav a:hover {
-  opacity: 1;
-}
-
-/* Pulsante "Open app" nella navbar */
-/* Pulsante "Open app" nella navbar */
-.nav-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 6px 22px;          /* più LARGO, un po' più basso */
-    border-radius: 999px;       /* pillola */
-
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-
-    background: radial-gradient(circle at 0 0, #1eff7b 0, #07180f 70%);
-    color: #011108;             /* testo scuro, leggibile */
-    border: 1px solid rgba(32, 255, 102, 0.7);
-    box-shadow: 0 0 14px rgba(24, 255, 120, 0.55);
-
-    text-decoration: none;
-    transition:
-        transform 0.16s ease-out,
-        box-shadow 0.16s ease-out,
-        background 0.16s ease-out;
-}
-
-.nav-cta:hover {
-    background: radial-gradient(circle at 0 0, #42ff93 0, #09301a 70%);
-    box-shadow: 0 0 20px rgba(50, 255, 140, 0.85);
-    transform: translateY(-1px);
-    color: #011108;   /* IMPORTANTISSIMO: il testo resta leggibile */
-}
 
 /* Logo */
 
@@ -216,7 +157,125 @@ body {
 /* --------------------------------------------------
    LOGO CLEAN C-1
 -------------------------------------------------- */
+/* Navbar – desktop base */
 
+.site-header {
+  width: 100%;
+  padding: 22px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo a sinistra */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.logo-dot {
+  font-size: 0.85em;      /* ".io" leggermente più piccolo */
+}
+
+/* link di navigazione – desktop */
+
+.nav {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav a {
+  color: #c7e2d6;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* hamburger: nascosto su desktop */
+
+.nav-toggle {
+  display: none;
+}
+
+
+/* ===============================
+   LAYOUT MOBILE (max 768px)
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 16px 18px 8px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  /* hamburger visibile a destra del logo */
+
+  .nav-toggle {
+    display: flex;
+    width: 38px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(50, 255, 157, 0.7);
+    background: rgba(1, 12, 8, 0.95);
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: #e5f5ff;
+  }
+
+  /* menu a tendina */
+
+  .nav {
+    position: fixed;
+    top: 64px;
+    right: 16px;
+    left: 16px;
+    padding: 20px 24px 28px;
+    border-radius: 24px;
+    background: rgba(3, 10, 6, 0.98);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    display: none;         /* chiuso di default */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    z-index: 50;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  /* quando JS aggiunge .nav-open, il menu si apre */
+
+  .nav.nav-open {
+    display: flex;
+  }
+}
 .logo-text {
   font-family: "Inter", sans-serif;
   font-size: 26px;
@@ -961,43 +1020,3 @@ card h3 {
   }
 }
 
-/* ===== NAVBAR OPEN APP BUTTON (DESKTOP) ===== */
-.site-header .nav-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 6px 24px;              /* più largo, un po' più basso */
-    border-radius: 999px;
-
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-
-    background: #19ff75;            /* verde pieno, non scurissimo */
-    color: #011108;                 /* testo leggibile */
-    border: 1px solid rgba(32, 255, 102, 0.8);
-    box-shadow: 0 0 18px rgba(32, 255, 120, 0.85);
-
-    text-decoration: none;
-    white-space: nowrap;            /* "Open app" sempre su una riga */
-    transition:
-        transform 0.15s ease-out,
-        box-shadow 0.15s ease-out,
-        background 0.15s ease-out;
-}
-
-.site-header .nav-cta:hover {
-    background: #32ff84;            /* ancora verde, solo un po' più chiaro */
-    box-shadow: 0 0 24px rgba(50, 255, 140, 1);
-    transform: translateY(-1px);
-    color: #011108;                 /* il testo NON diventa nero su nero */
-}
-
-/* Logo .io definitivo */
-.logo-dot {
-    font-size: 0.82em !important;     /* leggermente più piccolo */
-    font-weight: 500 !important;
-    margin-left: -2px !important;      /* avvicina .io a ScoreFeed */
-    opacity: 0.95;                    /* tocco elegante */
-}
