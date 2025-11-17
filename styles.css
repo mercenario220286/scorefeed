@@ -279,6 +279,32 @@ body {
   .nav a {
     font-size: 16px;
   }
+   /* CTA nel menu mobile: bottone verde neon come hero */
+  .nav a.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    background: radial-gradient(circle at 0 0, #36ff93 0, #009e46 55%, #007a35 100%);
+    color: #04130a;
+    border: 1px solid rgba(54, 255, 147, 0.85);
+    box-shadow: 0 0 18px rgba(54, 255, 147, 0.6);
+
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .nav a.nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(54, 255, 147, 0.9);
+  }
 
   /* quando JS aggiunge .nav-open */
   .nav.nav-open {
@@ -976,5 +1002,41 @@ card h3 {
   .status-pill {
     font-size: 10px;
     padding: 4px 10px;
+  }
+}
+
+/* Iconcina LIVE che pulsa nel bottone del menu mobile */
+.nav-cta-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #36ff93;
+  box-shadow: 0 0 10px rgba(54, 255, 147, 0.9);
+  margin-right: 8px;
+  position: relative;
+}
+
+.nav-cta-icon::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  border: 1px solid rgba(54, 255, 147, 0.8);
+  opacity: 0.7;
+  animation: nav-cta-pulse 1.4s infinite ease-out;
+}
+
+@keyframes nav-cta-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
   }
 }
