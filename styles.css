@@ -1061,3 +1061,14 @@ card h3 {
     opacity: 0;
   }
 }
+/* =========================================
+   HEADER DESKTOP – CTA "Open app"
+   (riusa lo stile del bottone hero)
+========================================= */
+
+@media (min-width: 769px) {
+  .site-header .nav-cta {
+    padding: 8px 20px;      /* un filo più compatto del bottone hero */
+    font-size: 14px;
+  }
+}
