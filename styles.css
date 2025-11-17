@@ -371,14 +371,20 @@ nav a.nav-cta {
   font-weight: 600;
   text-decoration: none;
 
-  background: radial-gradient(circle at 0 0, #36ff93 0, #009e46 55%, #007a35 100%);
+  background: radial-gradient(circle at 0 0, #36ff93 0%, #009e46 55%, #007a35 100%);
   color: #04130a;
+
   border: 1px solid rgba(54, 255, 147, 0.8);
-  box-shadow: 0 0 18px rgba(54, 255, 147, 0.55);
+
+  /* 💡 Glow IDENTICO all’hero */
+  box-shadow:
+    0 0 12px rgba(54, 255, 147, 0.6),
+    0 0 22px rgba(54, 255, 147, 0.35),
+    inset 0 0 6px rgba(0, 0, 0, 0.3);
 
   width: 100%;
   text-align: center;
-  margin-top: 12px;
+  margin-top: 14px;
 }
   .nav a.nav-cta:hover {
     transform: translateY(-1px);
