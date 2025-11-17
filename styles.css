@@ -240,12 +240,12 @@ body {
   /* Hamburger button */
   .nav-toggle {
     display: flex;
-    width: 40px;
-    height: 32px;
+    width: 34px;
+    height: 30px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     background: rgba(1, 12, 8, 0.96);
     border: 1px solid rgba(52, 255, 138, 0.7);
     border-radius: 999px;
@@ -254,7 +254,7 @@ body {
 
   .nav-toggle span {
     height: 2px;
-    width: 18px;
+    width: 16px;
     background: #e8fdf3;
     border-radius: 999px;
   }
