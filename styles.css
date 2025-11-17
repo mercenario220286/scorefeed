@@ -208,7 +208,28 @@ body {
 .nav-toggle {
   display: none;
 }
+/* Pulsante "Open app" nella navbar (desktop + mobile menu) */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(54, 255, 147, 0.8);
+  background: radial-gradient(circle at 0 0, #36ff93 0, #009e46 55%, #007a35 100%);
+  color: #04130a;                  /* testo scuro dentro il verde neon */
+  box-shadow: 0 0 18px rgba(54, 255, 147, 0.55);
+}
 
+/* hover desktop più brillante */
+@media (hover: hover) {
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(54, 255, 147, 0.8);
+  }
+}
 
 /* ===============================
    LAYOUT MOBILE (max 768px)
