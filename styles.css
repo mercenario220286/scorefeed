@@ -1130,3 +1130,88 @@ card h3 {
     font-size: 14px;
   }
 }
+
+/* =======================================
+   HEADER DESKTOP – CTA NEON VERSION A
+   (vale solo da 769px in su)
+======================================= */
+@media (min-width: 769px) {
+
+  .site-header {
+    padding: 22px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* menu orizzontale */
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .nav a {
+    color: #c7e2d6;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.12s ease-out;
+  }
+
+  .nav a:hover {
+    color: #ffffff;
+  }
+
+  /* sottolineatura neon sui link (tranne la CTA) */
+  .nav a:not(.nav-cta)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #32ff9d, #00e0ff);
+    transition: width 0.16s ease-out;
+  }
+
+  .nav a:not(.nav-cta):hover::after {
+    width: 100%;
+  }
+
+  /* CTA "Open app" – versione mini del bottone hero */
+  .nav-cta {
+    padding: 9px 22px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 0 0, #36ff93 0, #009e46 55%, #007133 100%);
+    color: #04130a; /* testo scuro come nel hero button */
+    font-weight: 600;
+    box-shadow: 0 0 18px rgba(54, 255, 147, 0.55);
+    border: 1px solid rgba(54, 255, 147, 0.85);
+    transform: translateY(0);
+    transition:
+      box-shadow 0.12s ease-out,
+      transform 0.08s ease-out,
+      filter 0.12s ease-out;
+  }
+
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(54, 255, 147, 0.9);
+    filter: brightness(1.05);
+  }
+
+  .nav-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 0 12px rgba(54, 255, 147, 0.5);
+  }
+
+  /* hamburger nascosto su desktop, se serve */
+  .nav-toggle {
+    display: none;
+  }
+}
