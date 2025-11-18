@@ -599,123 +599,76 @@ main {
 
 /* righe */
 
+/* Riga header + righe partite */
 .panel-row {
-  display: grid;
-  /* LEAGUE | MATCH | SCORE | STATUS */
-  grid-template-columns: 1.4fr 2.6fr 0.8fr 1.6fr;
-  align-items: center;
-  column-gap: 10px;
-  padding: 8px 16px;
-  font-size: 13px;
+    display: grid;
+    grid-template-columns: 1.5fr 2.8fr 0.7fr 1.4fr;  /* League | Match | Score | Status */
+    align-items: center;
+    column-gap: 14px;
+    padding: 10px 22px;
+    font-size: 14px;
 }
 
+/* Header (League / Match / Score / Status) */
 .panel-row.header {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--text-muted);
-  background: rgba(0, 0, 0, 0.45);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.8;
+    padding-bottom: 4px;
 }
 
-.panel-row:not(.header):nth-child(odd) {
-  background: rgba(0, 0, 0, 0.20);
-}
-
-.panel-row:not(.header):nth-child(even) {
-  background: rgba(0, 0, 0, 0.08);
-}
-
-.col {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.col-match {
-  justify-content: center;
-}
-
+/* Celle colonne: niente a capo, così le colonne restano allineate */
+.col-league,
+.col-match,
 .col-score,
 .col-status {
-  justify-content: center;
+    white-space: nowrap;
 }
 
-/* iconcine lega più precise */
-
-.league-icon {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
+/* Icona lega + nome perfettamente centrati */
+.col-league {
+    display: flex;
+    align-items: center;
 }
 
-.league-name {
-  white-space: nowrap;
+.col-league img.league-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    margin-right: 8px;
 }
 
-/* match */
-
-.match-cell {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.col-league .league-name {
+    position: relative;
+    top: 1px;
 }
 
-.team-home,
-.team-away {
-  white-space: nowrap;
+/* Match centrato meglio */
+.col-match.match-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.match-separator {
-  opacity: 0.6;
-}
-
-/* score */
-
-.score-cell {
-  justify-content: center;
-}
-
-/* status pill */
-
+/* Pill di stato più eleganti e meno “palla di fuoco” */
 .status-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  color: #021208;
-  white-space: nowrap;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 999px;
 }
 
-.status-pill .status-line {
-  line-height: 1.1;
-}
-
-/* ON-CHAIN static ma molto pulita */
-.status-onchain {
-  background: var(--status-onchain);
-  border-color: rgba(0, 0, 0, 0.25);
-}
-
-/* LIVE con leggero glow pulsante */
 .status-live {
-  background: var(--status-live);
-  border-color: rgba(0, 0, 0, 0.25);
-  animation: pulse-live 2s infinite;
+    background: rgba(255, 170, 0, 0.85);
 }
 
-/* FINAL più fredda */
 .status-final {
-  background: var(--status-final);
-  border-color: rgba(0, 0, 0, 0.25);
+    background: rgba(30, 140, 255, 0.85);
+}
+
+.status-onchain {
+    background: rgba(0, 210, 80, 0.85);
 }
 
 /* nota in basso */
