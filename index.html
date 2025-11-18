@@ -59,76 +59,87 @@
       </p>
     </div>
 
-    <!-- Colonna destra: pannello scoreboard -->
-    <aside class="hero-panel">
-      <div class="panel-inner">
-        <div class="panel-title">Live scoreboard</div>
+   <!-- colonna destra: pannello scoreboard (versione premium) -->
+      <aside class="hero-panel">
+        <div class="panel-inner">
+          <header class="panel-head">
+            <span class="panel-kicker">Live UI preview</span>
+            <h2 class="panel-title">Live scoreboard</h2>
+          </header>
 
-        <div class="scoreboard">
-          <div class="panel-row header">
-            <span class="col col-league">League</span>
-            <span class="col col-match">Match</span>
-            <span class="col col-score">Score</span>
-            <span class="col col-status">Status</span>
+          <div class="scoreboard">
+            <!-- header -->
+            <div class="panel-row header">
+              <span class="col col-league">League</span>
+              <span class="col col-match">Match</span>
+              <span class="col col-score">Score</span>
+              <span class="col col-status">Status</span>
+            </div>
+
+            <!-- row 1 -->
+            <div class="panel-row">
+              <span class="col col-league">
+                <img src="premier-league.png" alt="Premier League" class="league-icon" />
+                <span class="league-name">Premier League</span>
+              </span>
+              <span class="col col-match match-cell">
+                <span class="team-home">Chelsea</span>
+                <span class="match-separator">–</span>
+                <span class="team-away">Arsenal</span>
+              </span>
+              <span class="col col-score score-cell">2 – 1</span>
+              <span class="col col-status">
+                <span class="status-pill status-onchain">
+                  <span class="status-line">On</span>
+                  <span class="status-line">chain</span>
+                </span>
+              </span>
+            </div>
+
+            <!-- row 2 -->
+            <div class="panel-row">
+              <span class="col col-league">
+                <img src="laliga.png" alt="La Liga" class="league-icon" />
+                <span class="league-name">La Liga</span>
+              </span>
+              <span class="col col-match match-cell">
+                <span class="team-home">Real Madrid</span>
+                <span class="match-separator">–</span>
+                <span class="team-away">Barcelona</span>
+              </span>
+              <span class="col col-score score-cell">1 – 1</span>
+              <span class="col col-status">
+                <span class="status-pill status-live">
+                  <span class="status-line">Live</span>
+                </span>
+              </span>
+            </div>
+
+            <!-- row 3 -->
+            <div class="panel-row">
+              <span class="col col-league">
+                <img src="premier-league.png" alt="Premier League" class="league-icon" />
+                <span class="league-name">Premier League</span>
+              </span>
+              <span class="col col-match match-cell">
+                <span class="team-home">Liverpool</span>
+                <span class="match-separator">–</span>
+                <span class="team-away">Spurs</span>
+              </span>
+              <span class="col col-score score-cell">3 – 0</span>
+              <span class="col col-status">
+                <span class="status-pill status-final">
+                  <span class="status-line">Final</span>
+                </span>
+              </span>
+            </div>
           </div>
 
-          <!-- Row 1 -->
-          <div class="panel-row">
-            <span class="col col-league">
-              <img src="premier-league.png" alt="Premier League" class="league-icon" />
-              <span class="league-name">Premier League</span>
-            </span>
-            <span class="col col-match match-cell">
-              <span class="team-home">Chelsea</span>
-              <span class="match-separator">–</span>
-              <span class="team-away">Arsenal</span>
-            </span>
-            <span class="col col-score score-cell">2 – 1</span>
-            <span class="col col-status">
-              <span class="status-pill status-onchain">On chain</span>
-            </span>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="panel-row">
-            <span class="col col-league">
-              <img src="laliga.png" alt="La Liga" class="league-icon" />
-              <span class="league-name">La Liga</span>
-            </span>
-            <span class="col col-match match-cell">
-              <span class="team-home">Real Madrid</span>
-              <span class="match-separator">–</span>
-              <span class="team-away">Barcelona</span>
-            </span>
-            <span class="col col-score score-cell">1 – 1</span>
-            <span class="col col-status">
-              <span class="status-pill status-live">Live</span>
-            </span>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="panel-row">
-            <span class="col col-league">
-              <img src="premier-league.png" alt="Premier League" class="league-icon" />
-              <span class="league-name">Premier League</span>
-            </span>
-            <span class="col col-match match-cell">
-              <span class="team-home">Liverpool</span>
-              <span class="match-separator">–</span>
-              <span class="team-away">Spurs</span>
-            </span>
-            <span class="col col-score score-cell">3 – 0</span>
-            <span class="col col-status">
-              <span class="status-pill status-final">Final</span>
-            </span>
-          </div>
+          <p class="panel-foot">
+            Live UI preview. Oracle feed and on-chain data coming as the MVP goes live.
+          </p>
         </div>
-        
-        <div class="panel-foot">
-          Live UI preview. Oracle feed and on-chain data coming as the MVP goes live.
-        </div>
-      </div>
-    </aside>
+      </aside> 
   </section>
 
     <!-- ABOUT -->
