@@ -67,78 +67,22 @@
             <h2 class="panel-title">Live scoreboard</h2>
           </header>
 
-          <div class="scoreboard">
-            <!-- header -->
-            <div class="panel-row header">
-              <span class="col col-league">League</span>
-              <span class="col col-match">Match</span>
-              <span class="col col-score">Score</span>
-              <span class="col col-status">Status</span>
-            </div>
+    <div class="scoreboard">
+  <!-- header -->
+  <div class="panel-row header">
+    <span class="col col-league">League</span>
+    <span class="col col-match">Match</span>
+    <span class="col col-score">Score</span>
+    <span class="col col-status">Status</span>
+  </div>
 
-            <!-- row 1 -->
-            <div class="panel-row">
-              <span class="col col-league">
-                <img src="premier-league.png" alt="Premier League" class="league-icon" />
-                <span class="league-name">Premier League</span>
-              </span>
-              <span class="col col-match match-cell">
-                <span class="team-home">Chelsea</span>
-                <span class="match-separator">–</span>
-                <span class="team-away">Arsenal</span>
-              </span>
-              <span class="col col-score score-cell">2 – 1</span>
-              <span class="col col-status">
-                <span class="status-pill status-onchain">
-                  <span class="status-line">On</span>
-                  <span class="status-line">chain</span>
-                </span>
-              </span>
-            </div>
+  <!-- QUI JS inserirà le righe -->
+  <div id="hero-scoreboard-rows"></div>
 
-            <!-- row 2 -->
-            <div class="panel-row">
-              <span class="col col-league">
-                <img src="laliga.png" alt="La Liga" class="league-icon" />
-                <span class="league-name">La Liga</span>
-              </span>
-              <span class="col col-match match-cell">
-                <span class="team-home">Real Madrid</span>
-                <span class="match-separator">–</span>
-                <span class="team-away">Barcelona</span>
-              </span>
-              <span class="col col-score score-cell">1 – 1</span>
-              <span class="col col-status">
-                <span class="status-pill status-live">
-                  <span class="status-line">Live</span>
-                </span>
-              </span>
-            </div>
-
-            <!-- row 3 -->
-            <div class="panel-row">
-              <span class="col col-league">
-                <img src="premier-league.png" alt="Premier League" class="league-icon" />
-                <span class="league-name">Premier League</span>
-              </span>
-              <span class="col col-match match-cell">
-                <span class="team-home">Liverpool</span>
-                <span class="match-separator">–</span>
-                <span class="team-away">Spurs</span>
-              </span>
-              <span class="col col-score score-cell">3 – 0</span>
-              <span class="col col-status">
-                <span class="status-pill status-final">
-                  <span class="status-line">Final</span>
-                </span>
-              </span>
-            </div>
-          </div>
-
-          <p class="panel-foot">
-            Live UI preview. Oracle feed and on-chain data coming as the MVP goes live.
-          </p>
-        </div>
+  <div class="panel-foot">
+    Live UI preview. Oracle feed and on-chain data coming as the MVP goes live.
+  </div>
+</div>
       </aside> 
   </section>
 
@@ -316,6 +260,115 @@
       }
     });
   }
+</script>
+  <script>
+  // Partite da ruotare (mock per ora)
+  const HERO_MATCHES = [
+    {
+      leagueLogo: 'premier-league.png',
+      leagueName: 'Premier League',
+      home: 'Chelsea',
+      away: 'Arsenal',
+      score: '2 – 1',
+      statusLabel: 'ONCHAIN',
+      statusClass: 'status-onchain'
+    },
+    {
+      leagueLogo: 'laliga.png',
+      leagueName: 'La Liga',
+      home: 'Real Madrid',
+      away: 'Barcelona',
+      score: '1 – 1',
+      statusLabel: 'LIVE',
+      statusClass: 'status-live'
+    },
+    {
+      leagueLogo: 'premier-league.png',
+      leagueName: 'Premier League',
+      home: 'Liverpool',
+      away: 'Spurs',
+      score: '3 – 0',
+      statusLabel: 'FINAL',
+      statusClass: 'status-final'
+    },
+    {
+      leagueLogo: 'seriea.png',
+      leagueName: 'Serie A',
+      home: 'Inter',
+      away: 'Juventus',
+      score: '0 – 0',
+      statusLabel: 'LIVE',
+      statusClass: 'status-live'
+    },
+    {
+      leagueLogo: 'bundesliga.png',
+      leagueName: 'Bundesliga',
+      home: 'Bayern',
+      away: 'Dortmund',
+      score: '2 – 2',
+      statusLabel: 'FINAL',
+      statusClass: 'status-final'
+    },
+    {
+      leagueLogo: 'mls.png',
+      leagueName: 'MLS',
+      home: 'LAFC',
+      away: 'Inter Miami',
+      score: '1 – 0',
+      statusLabel: 'ONCHAIN',
+      statusClass: 'status-onchain'
+    }
+  ];
+
+  const ROWS_PER_VIEW = 3;          // quante partite vedere per volta
+  const ROTATE_EVERY_MS = 5000;     // ogni quanti ms ruotare (5 sec)
+
+  function renderHeroScoreboard(startIndex = 0) {
+    const container = document.getElementById('hero-scoreboard-rows');
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    for (let i = 0; i < ROWS_PER_VIEW; i++) {
+      const match = HERO_MATCHES[(startIndex + i) % HERO_MATCHES.length];
+
+      const row = document.createElement('div');
+      row.className = 'panel-row';
+
+      row.innerHTML = `
+        <span class="col col-league">
+          <img src="${match.leagueLogo}" alt="${match.leagueName}" class="league-icon" />
+          <span class="league-name">${match.leagueName}</span>
+        </span>
+
+        <span class="col col-match col-match-cell">
+          <span class="team-home">${match.home}</span>
+          <span class="match-separator">–</span>
+          <span class="team-away">${match.away}</span>
+        </span>
+
+        <span class="col col-score score-cell">
+          ${match.score}
+        </span>
+
+        <span class="col col-status">
+          <span class="status-pill ${match.statusClass}">${match.statusLabel}</span>
+        </span>
+      `;
+
+      container.appendChild(row);
+    }
+  }
+
+  // prima render
+  let currentStart = 0;
+  renderHeroScoreboard(currentStart);
+
+  // rotazione automatica
+  setInterval(() => {
+    currentStart = (currentStart + ROWS_PER_VIEW) % HERO_MATCHES.length;
+    renderHeroScoreboard(currentStart);
+  }, ROTATE_EVERY_MS);
 </script>
 </body>
 </html>
