@@ -35,14 +35,18 @@
   </nav>
 </header>
 
-  <main>
-    <!-- HERO -->
-  <section id="hero" class="hero">
+ <main>
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Colonna sinistra: testo + bottoni -->
     <div class="hero-content">
-      <h1>The football data oracle built for AI, betting and Web3.</h1>
+      <h1 class="hero-title">
+        The football data oracle built for AI, betting and Web3.
+      </h1>
 
-      <p class="hero-subtitle">
-        Real-time match data, verified results and structured football feeds for builders and prediction markets.
+      <p class="hero-sub">
+        Real-time match data, verified results and structured football feeds
+        for builders and prediction markets.
       </p>
 
       <div class="hero-actions">
@@ -55,12 +59,77 @@
       </p>
     </div>
 
-      <!-- LIVE SCOREBOARD PANEL -->
-      <aside class="hero-panel">
-        <div class="panel-inner">
-          <div class="panel-title">Live scoreboard</div>
-          </aside>
-        </section>
+    <!-- Colonna destra: pannello scoreboard -->
+    <aside class="hero-panel">
+      <div class="panel-inner">
+        <div class="panel-title">Live scoreboard</div>
+
+        <div class="scoreboard">
+          <div class="panel-row header">
+            <span class="col col-league">League</span>
+            <span class="col col-match">Match</span>
+            <span class="col col-score">Score</span>
+            <span class="col col-status">Status</span>
+          </div>
+
+          <!-- Row 1 -->
+          <div class="panel-row">
+            <span class="col col-league">
+              <img src="premier-league.png" alt="Premier League" class="league-icon" />
+              <span class="league-name">Premier League</span>
+            </span>
+            <span class="col col-match match-cell">
+              <span class="team-home">Chelsea</span>
+              <span class="match-separator">–</span>
+              <span class="team-away">Arsenal</span>
+            </span>
+            <span class="col col-score score-cell">2 – 1</span>
+            <span class="col col-status">
+              <span class="status-pill status-onchain">On chain</span>
+            </span>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="panel-row">
+            <span class="col col-league">
+              <img src="laliga.png" alt="La Liga" class="league-icon" />
+              <span class="league-name">La Liga</span>
+            </span>
+            <span class="col col-match match-cell">
+              <span class="team-home">Real Madrid</span>
+              <span class="match-separator">–</span>
+              <span class="team-away">Barcelona</span>
+            </span>
+            <span class="col col-score score-cell">1 – 1</span>
+            <span class="col col-status">
+              <span class="status-pill status-live">Live</span>
+            </span>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="panel-row">
+            <span class="col col-league">
+              <img src="premier-league.png" alt="Premier League" class="league-icon" />
+              <span class="league-name">Premier League</span>
+            </span>
+            <span class="col col-match match-cell">
+              <span class="team-home">Liverpool</span>
+              <span class="match-separator">–</span>
+              <span class="team-away">Spurs</span>
+            </span>
+            <span class="col col-score score-cell">3 – 0</span>
+            <span class="col col-status">
+              <span class="status-pill status-final">Final</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="panel-foot">
+          Live UI preview. Oracle feed and on-chain data coming as the MVP goes live.
+        </div>
+      </div>
+    </aside>
+  </section>
 
           <div class="scoreboard">
             <div class="panel-row header">
