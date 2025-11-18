@@ -424,23 +424,33 @@ main {
 .hero-content {
   max-width: 620px;
 }
+.hero-content::after {
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 160px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0));
+    pointer-events: none;
+}
 
 .hero-title {
+  text-shadow: 0 0 20px rgba(80,255,120,0.08);
   font-size: clamp(38px, 4vw, 52px);
   line-height: 1.08;
   font-weight: 700;
   margin: 0 0 18px;
-  color: #eafee6; /* bianco-verde molto pulito */
+  color: #DAFEE0; /* bianco-verde molto pulito */
 }
 
 .hero-sub {
   font-size: 18px;
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.78);
   margin: 0 0 26px;
 }
 
 .hero-actions {
+  margin-top: 18px !important; /* invece dei 22px attuali */
   display: flex;
   gap: 16px;
   align-items: center;
@@ -450,7 +460,7 @@ main {
 .hero-tagline {
   margin-top: 4px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* Scoreboard colonna destra */
