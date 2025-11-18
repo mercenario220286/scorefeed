@@ -519,8 +519,7 @@ main {
     font-size: 13px;
     color: var(--text-muted);
 }
-
-/* HERO SCOREBOARD PANEL */
+/* HERO SCOREBOARD PANEL – versione premium */
 
 .hero-panel {
   display: flex;
@@ -530,74 +529,98 @@ main {
 .panel-inner {
   width: 100%;
   max-width: 420px;
-  background: radial-gradient(circle at top left, #0c2a1b 0, #07150f 55%);
+  padding: 16px 18px 14px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--card-border);
-  box-shadow: 0 0 26px rgba(11, 255, 124, 0.4);
-  padding: 14px 18px 12px;
+  background:
+    radial-gradient(circle at top left, #103323 0, #06130e 55%)
+    fixed;
+  box-shadow: 0 0 26px rgba(11, 255, 124, 0.45);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
+/* leggero flare diagonale */
 .panel-inner::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: linear-gradient(
     135deg,
-    rgba(10, 255, 120, 0.09) 0,
+    rgba(10, 255, 120, 0.10) 0,
     transparent 40%
   );
-  opacity: 0.5;
+  opacity: 0.7;
   pointer-events: none;
 }
 
-.panel-title {
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 0.18em;
+.panel-head {
+  position: relative;
+  z-index: 1;
   margin-bottom: 10px;
-  color: var(--accent);
   text-align: center;
 }
 
+.panel-kicker {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.panel-title {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* tabellone */
+
 .scoreboard {
+  position: relative;
+  z-index: 1;
   border-radius: 14px;
-  border: 1px solid rgba(24, 255, 99, 0.35);
+  border: 1px solid rgba(24, 255, 99, 0.4);
   background:
     repeating-linear-gradient(
       45deg,
-      rgba(0, 0, 0, 0.16) 0,
-      rgba(0, 0, 0, 0.16) 2px,
+      rgba(0, 0, 0, 0.22) 0,
+      rgba(0, 0, 0, 0.22) 2px,
       transparent 2px,
       transparent 6px
     ),
-    radial-gradient(circle at top, #031a0f 0, #020806 65%);
+    radial-gradient(circle at top, #020b06 0, #020604 65%);
   overflow: hidden;
 }
 
+/* righe */
+
 .panel-row {
   display: grid;
-  grid-template-columns: 1.6fr 2.8fr 1.1fr 1.5fr;
+  grid-template-columns: 1.7fr 2.7fr 1fr 1.4fr;
   align-items: center;
-  padding: 8px 12px;
+  padding: 8px 14px;
   font-size: 13px;
 }
 
 .panel-row.header {
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   color: var(--text-muted);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .panel-row:not(.header):nth-child(odd) {
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.20);
 }
 
 .panel-row:not(.header):nth-child(even) {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .col {
@@ -609,6 +632,13 @@ main {
 .col-match {
   justify-content: center;
 }
+
+.col-score,
+.col-status {
+  justify-content: center;
+}
+
+/* iconcine lega più precise */
 
 .league-icon {
   width: 18px;
@@ -622,11 +652,12 @@ main {
   white-space: nowrap;
 }
 
+/* match */
+
 .match-cell {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  text-align: center;
 }
 
 .team-home,
@@ -638,9 +669,13 @@ main {
   opacity: 0.6;
 }
 
+/* score */
+
 .score-cell {
   justify-content: center;
 }
+
+/* status pill */
 
 .status-pill {
   display: inline-flex;
@@ -650,44 +685,63 @@ main {
   border-radius: var(--radius-pill);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border: 1px solid transparent;
   color: #021208;
   white-space: nowrap;
-}
-
-.status-pill.small {
-  font-size: 10px;
-  padding: 3px 10px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .status-pill .status-line {
-  display: block;
   line-height: 1.1;
 }
 
+/* ON-CHAIN static ma molto pulita */
 .status-onchain {
   background: var(--status-onchain);
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
+/* LIVE con leggero glow pulsante */
 .status-live {
   background: var(--status-live);
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.25);
+  animation: pulse-live 2s infinite;
 }
 
+/* FINAL più fredda */
 .status-final {
   background: var(--status-final);
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
+/* nota in basso */
+
 .panel-foot {
-  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+  margin-top: 9px;
   font-size: 11px;
   color: var(--text-muted);
   text-align: center;
 }
+
+/* animazione LIVE */
+@keyframes pulse-live {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 181, 43, 0.8);
+    transform: translateY(0);
+  }
+  55% {
+    box-shadow: 0 0 18px 4px rgba(255, 181, 43, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 181, 43, 0);
+    transform: translateY(0);
+  }
+}
+
 
 /* ==========
    SECTIONS
