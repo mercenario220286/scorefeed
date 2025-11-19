@@ -1281,3 +1281,70 @@ card h3 {
     opacity: 0;
   }
 }
+/* === LIVE SCOREBOARD – desktop refine === */
+/* Vale solo per la card nell'hero */
+.hero-panel .scoreboard {
+  max-width: 520px;              /* allargo un po' la tabella interna */
+  padding: 18px 26px 16px;       /* più respiro ai lati, soprattutto a destra */
+}
+
+/* Ogni riga (header + match) diventa una griglia a 4 colonne */
+.hero-panel .scoreboard .panel-row {
+  display: grid;
+  grid-template-columns: 1.1fr 2.2fr 0.5fr 0.9fr;  /* League | Match | Score | Status */
+  column-gap: 12px;
+  align-items: center;
+  min-width: 0;
+}
+
+/* Header LEAGUE | MATCH | SCORE | STATUS */
+.hero-panel .scoreboard .panel-row.header {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Celle generiche */
+.hero-panel .scoreboard .col {
+  min-width: 0;
+}
+
+/* Colonna LEAGUE: logo + nome */
+.hero-panel .scoreboard .col-league {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-panel .scoreboard .league-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.hero-panel .scoreboard .league-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Colonna MATCH: squadre su una riga sola */
+.hero-panel .scoreboard .match-cell {
+  display: inline-flex;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+/* Colonna SCORE */
+.hero-panel .scoreboard .col-score {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Colonna STATUS: pill sempre dentro la card, allineata a destra */
+.hero-panel .scoreboard .col-status {
+  text-align: right;
+}
