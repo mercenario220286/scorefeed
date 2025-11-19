@@ -462,10 +462,6 @@ main {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.55);
 }
-
-/* Scoreboard colonna destra */
-.hero-panel {
-  transform: translateY(8px);
 }
 /* HERO BUTTONS */
 .btn {
@@ -522,11 +518,15 @@ main {
 /* HERO SCOREBOARD PANEL – versione premium */
 
 .hero-panel {
-  display: flex;
-  justify-content: flex-end;
+    justify-self: flex-end;
+    max-width: 520px;   /* prima era più stretta: ora prende più spazio */
+    width: 100%;
 }
 
 .panel-inner {
+    padding: 20px 26px 18px;
+    border-radius: 28px;
+}
   width: 100%;
   max-width: 420px;
   padding: 16px 18px 14px;
