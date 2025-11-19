@@ -1148,53 +1148,60 @@ card h3 {
     display: none;
   }
    /* =========================
-   LIVE SCOREBOARD (desktop)
-   ========================= */
 
+/* LIVE SCOREBOARD (desktop) – layout pulito */
 .scoreboard {
-  width: 380px;
-  padding: 16px 20px;
-  background: #050b0a;
+  margin-top: 22px;
+  padding: 18px 24px 16px;
+  background: rgba(3, 6, 10, 0.95);
   border-radius: 18px;
-  border: 1px solid rgba(54, 255, 147, 0.6);
-  box-shadow: 0 0 28px rgba(54, 255, 147, 0.4);
-}
-
-.scoreboard .panel-row {
+  border: 1px solid rgba(54, 255, 147, 0.35);
+  box-shadow: 0 0 18px rgba(54, 255, 147, 0.45);
   display: grid;
-  grid-template-columns: 1.1fr 1.7fr 0.6fr 0.8fr; /* League | Match | Score | Status */
-  column-gap: 12px;
-  align-items: center;
-  padding: 8px 0;
+  row-gap: 10px;
   font-size: 13px;
 }
 
-.scoreboard .panel-row.header {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.65);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 4px;
+/* Ogni riga (header + match) usa la stessa griglia */
+.scoreboard .panel-row {
+  display: grid;
+  grid-template-columns: 1.6fr 2.1fr 0.6fr 1fr; /* League | Match | Score | Status */
+  column-gap: 18px;
+  align-items: center;
 }
 
+/* Header in alto (LEAGUE / MATCH / SCORE / STATUS) */
+.scoreboard .panel-row.header {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Spazio fra le righe delle partite */
+.scoreboard .panel-row + .panel-row {
+  margin-top: 6px;
+}
+
+/* Colonne base */
 .scoreboard .col {
   display: flex;
   align-items: center;
 }
 
-/* League e Match a sinistra, Score e Status a destra */
+/* Allineamenti per score e status a destra */
 .scoreboard .col.col-score,
 .scoreboard .col.col-status {
   justify-content: flex-end;
 }
 
+/* Logo lega + nome */
 .scoreboard .league-icon {
   width: 18px;
   height: 18px;
   margin-right: 8px;
+  border-radius: 50%;
   flex-shrink: 0;
-  border-radius: 999px;
 }
 
 .scoreboard .league-name {
@@ -1203,26 +1210,30 @@ card h3 {
   text-overflow: ellipsis;
 }
 
-/* Match (Inter – Juventus) su una riga sola */
+/* Match (home – away) nella seconda colonna */
 .scoreboard .match-cell {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  gap: 6px;
-}
-
-.scoreboard .team-home,
-.scoreboard .team-away {
+  justify-content: flex-start;
+  gap: 4px;
   white-space: nowrap;
 }
 
-.scoreboard .match-separator {
-  opacity: 0.7;
+/* Se i nomi squadra sono lunghi, tagliali con "..." */
+.scoreboard .team-home,
+.scoreboard .team-away {
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Risultato al centro della sua colonna */
 .scoreboard .score-cell {
-  font-variant-numeric: tabular-nums;
+  min-width: 42px;
+  justify-content: center;
 }
 
+/* La pill di stato la lasciamo com'è già definita altrove
+   (status-pill, status-live, status-final, status-onchain) */
+   
 /* Pill di stato */
 
 .status-pill {
