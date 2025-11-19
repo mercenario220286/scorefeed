@@ -1348,3 +1348,64 @@ card h3 {
 .hero-panel .scoreboard .col-status {
   text-align: right;
 }
+/* ==== LIVE SCOREBOARD HERO (DESKTOP) – OVERRIDE === */
+
+/* Allargo un po' la card verde */
+.hero-panel {
+  max-width: 540px;
+}
+
+.hero-panel .panel-inner {
+  padding: 26px 32px;
+}
+
+/* Lavoriamo solo sulla scoreboard dentro l'hero */
+.hero-panel .scoreboard {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 13px;          /* testo leggermente più piccolo */
+}
+
+/* Colonne ordinate in griglia */
+.hero-panel .scoreboard .panel-row {
+  display: grid;
+  grid-template-columns: 1.4fr 2.4fr 0.7fr 1.1fr; /* League | Match | Score | Status */
+  align-items: center;
+  column-gap: 16px;
+}
+
+/* Header un filo più compatto */
+.hero-panel .scoreboard .panel-row.header {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Celle testo: niente cose strane, solo allineamento pulito */
+.hero-panel .scoreboard .col {
+  display: flex;
+  align-items: center;
+}
+
+/* League: logo + nome con un minimo di spazio */
+.hero-panel .scoreboard .col-league {
+  gap: 8px;
+}
+
+/* Match: le due squadre su una riga, se ci stanno */
+.hero-panel .scoreboard .col-match {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;   /* se è troppo lungo mette i tre puntini, non rompe il layout */
+}
+
+/* Score centrato */
+.hero-panel .scoreboard .col-score {
+  justify-content: center;
+}
+
+/* Status pill allineato a destra della colonna */
+.hero-panel .scoreboard .col-status {
+  justify-content: flex-end;
+}
