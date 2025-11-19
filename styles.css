@@ -641,6 +641,79 @@ main {
     radial-gradient(circle at top, #020b06 0, #020604 65%);
   overflow: hidden;
 }
+/* Pannello live scoreboard più largo su desktop */
+@media (min-width: 1024px) {
+  .hero-panel {
+    max-width: 430px;
+  }
+   /* Font leggermente più compatto nella tabella */
+.scoreboard {
+  font-size: 12px;
+}
+
+/* Ogni riga (header + match) in 4 colonne: League | Match | Score | Status */
+.scoreboard .panel-row {
+  display: grid;
+  grid-template-columns: 1.3fr 2.9fr 0.7fr 1.1fr;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Header della tabella */
+.scoreboard .panel-row.header {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+
+/* Header LEAGUE allineato con i loghi sotto */
+.scoreboard .panel-row.header .col-league {
+  padding-left: 24px;
+}
+
+/* Colonna LEAGUE: icona + testo */
+.scoreboard .col-league {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.scoreboard .league-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Colonna MATCH: tutto su una riga, un po' più di spazio */
+.scoreboard .col-match {
+  padding-right: 8px;
+}
+
+.scoreboard .match-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.scoreboard .team-home,
+.scoreboard .team-away,
+.scoreboard .match-separator {
+  white-space: nowrap;
+}
+
+/* SCORE centrato e con larghezza minima */
+.scoreboard .col-score {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  min-width: 38px;
+}
+
+/* STATUS: pillola allineata a destra */
+.scoreboard .col-status {
+  justify-self: end;
+}
+}
 
 /* righe */
 
