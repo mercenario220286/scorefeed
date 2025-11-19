@@ -1391,3 +1391,56 @@ card h3 {
     opacity: 0;
   }
 }
+/* === STEP 1: layout colonne scoreboard (desktop + mobile) === */
+
+.scoreboard .panel-row {
+  display: grid;
+  grid-template-columns: 1.4fr 2.6fr 0.7fr 1.1fr; /* League | Match | Score | Status */
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* header (League / Match / Score / Status) */
+.scoreboard .panel-row.header {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* celle generiche */
+.scoreboard .col {
+  display: flex;
+  align-items: center;
+}
+
+/* league: logo + nome */
+.scoreboard .col-league .league-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.scoreboard .col-league .league-name {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+/* match: squadra - squadra */
+.scoreboard .col-match {
+  justify-content: flex-start;
+  font-size: 13px;
+}
+
+.scoreboard .match-separator {
+  margin: 0 4px;
+}
+
+/* score centrato */
+.scoreboard .col-score {
+  justify-content: center;
+}
+
+/* pill a destra */
+.scoreboard .col-status {
+  justify-content: flex-end;
+}
