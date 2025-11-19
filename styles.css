@@ -406,6 +406,51 @@ main {
   z-index: 1;
   padding: 10px 6vw 60px;
 }
+/* Layout premium per tabellina LIVE SCOREBOARD */
+.scoreboard {
+  font-size: 13px;
+}
+
+/* Ogni riga (header + match) diventa una griglia a 4 colonne:
+   League | Match | Score | Status */
+.scoreboard .panel-row {
+  display: grid;
+  grid-template-columns: 1.4fr 2.6fr 0.7fr 1.2fr;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Header della tabella */
+.scoreboard .panel-row.header {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+/* Colonna LEAGUE: icona + nome ben allineati */
+.scoreboard .col-league {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.scoreboard .league-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Colonna SCORE: numeri centrati e con spazi uguali */
+.scoreboard .col-score {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Colonna STATUS: pillola allineata a destra */
+.scoreboard .col-status {
+  justify-self: end;
+}
 
 /* ==========================
    HERO DESKTOP REFINED
