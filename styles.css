@@ -538,6 +538,9 @@ main {
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+   /* più largo solo in hero desktop */
+    width: 520px;
+    max-width: 520px;
 }
 
 /* leggero flare diagonale */
