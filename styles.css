@@ -1401,6 +1401,7 @@ card h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;   /* se è troppo lungo mette i tre puntini, non rompe il layout */
+  font-size: 13px;
 }
 
 /* Score centrato */
