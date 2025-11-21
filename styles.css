@@ -1319,13 +1319,14 @@ card h3 {
 .hero-panel .scoreboard .col-league {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;              /* spazio tra logo e testo */
   min-width: 150px;      /* allargo un po' la colonna lega */
 }
 
 .hero-panel .scoreboard .league-icon {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 
