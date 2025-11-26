@@ -1405,12 +1405,14 @@ card h3 {
   gap: 8px;
 }
 
-/* Match: le due squadre su una riga, se ci stanno */
+/* Colonna MATCH - versione premium */
 .hero-panel .scoreboard .col-match {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;   /* se è troppo lungo mette i tre puntini, non rompe il layout */
-  font-size: 13px;
+    width: 55%;              /* spazio principale */
+    font-size: 16px;         /* leggibile e premium */
+    padding-left: 10px;      /* un po' di respiro sulla sinistra */
+    text-align: left;        /* allineamento professionale */
+    letter-spacing: 0.2px;
+    white-space: nowrap;     /* impedisce il ritorno a capo */
 }
 
 /* Score centrato */
