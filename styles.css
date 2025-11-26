@@ -1327,11 +1327,11 @@ card h3 {
 .hero-panel .scoreboard .league-icon {
     width: 32px;
     height: 32px;
-    border-radius: 6px;     /* NON circolare, moderno */
-    object-fit: contain;    /* il logo non si deforma */
-    background: #111;       /* se il logo non è trasparente, bello lo stesso */
-    padding: 3px;
-    flex-shrink: 0;
+    border-radius: 6px;
+    object-fit: contain;
+    padding: 0;             /* prima 3px → lo togliamo */
+    background: transparent; /* NESSUN SFONDO */
+    box-shadow: none;       /* evita aloni o bordi fantasma */
 }
 
 /* Nome lega: pulito e leggibile */
