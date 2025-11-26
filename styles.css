@@ -1315,19 +1315,19 @@ card h3 {
   min-width: 0;
 }
 
-/* Colonna LEAGUE: icona + nome ben allineati */
-.hero-panel .scoreboard .col-league {
+/* Colonna LEAGUE allineata a sinistra */
+.scoreboard .col-league {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;              /* spazio tra logo e testo */
-  min-width: 150px;      /* allargo un po' la colonna lega */
+  justify-content: flex-start;   /* << qui la magia */
+  padding-left: 10px;            /* piccolo margine per respirare */
 }
 
 .hero-panel .scoreboard .league-icon {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
+  margin-right: 6px;
 }
 
 /* Nome lega: pulito e leggibile */
