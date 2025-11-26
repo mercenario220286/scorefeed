@@ -1403,13 +1403,14 @@ card h3 {
 /* League: logo + nome con un minimo di spazio */
 .hero-panel .scoreboard .col-league {
   gap: 8px;
+  width: 18%;
 }
 
 /* Colonna MATCH - versione premium */
 .hero-panel .scoreboard .col-match {
-    width: 60%;              /* spazio principale */
+    width: 52%;              /* spazio principale */
     font-size: 17px;         /* leggibile e premium */
-    padding-left: 5px;      /* un po' di respiro sulla sinistra */
+    padding-left: 10px;      /* un po' di respiro sulla sinistra */
     text-align: left;        /* allineamento professionale */
     letter-spacing: 0.2px;
     white-space: nowrap;     /* impedisce il ritorno a capo */
@@ -1418,9 +1419,13 @@ card h3 {
 /* Score centrato */
 .hero-panel .scoreboard .col-score {
   justify-content: center;
+  width: 12%;
+  text-align: center; 
 }
 
 /* Status pill allineato a destra della colonna */
 .hero-panel .scoreboard .col-status {
   justify-content: flex-end;
+  width: 18%;
+  text-align: right; 
 }
